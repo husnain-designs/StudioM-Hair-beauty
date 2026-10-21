@@ -135,7 +135,7 @@ button{font-family:inherit;color:inherit}
     </div>
   </sc-if>
   <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex;gap:8px;overflow-x:auto;padding:8px 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x">
+    <div style="display:flex;gap:8px;overflow-x:auto;padding:8px 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y">
       <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
         <a href="{{ c.hash }}" onClick="{{ c.jump }}" style="flex:0 0 auto;display:flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid {{ c.chipLine }};background:{{ c.chipBg }};color:{{ c.chipFg }};font-size:10.5px;font-weight:500;letter-spacing:.2em;transition:background .5s,color .5s,border-color .5s">{{ c.titleU }}</a>
       </sc-for>

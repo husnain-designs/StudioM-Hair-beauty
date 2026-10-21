@@ -296,8 +296,14 @@
     // .frame img (clipped) and .spill (unclipped ghost + handles) share the
     // same left/top/width/height in frame-%, computed by _applyView(), so the
     // inside-mask crop and the outside-mask spill stay pixel-aligned.
+    // No touch-action restriction here: this is the always-visible display
+    // image on every slot, including non-editable ones on the live site, so
+    // disabling touch-action would also disable native page scroll for any
+    // touch gesture that happens to start on top of an image. The drag/pan
+    // interactions this component offers happen on .spill (reframe mode
+    // only, gated by data-editable), not on the frame image itself.
     '.frame img{position:absolute;max-width:none;transform:translate(-50%,-50%);' +
-    '  -webkit-user-drag:none;user-select:none;touch-action:none}' +
+    '  -webkit-user-drag:none;user-select:none}' +
     // Reframe mode (double-click): the full image spills past the mask. The
     // spill layer is sized to the IMAGE bounds so its corners are where the
     // resize handles belong. The ghost <img> inside is translucent; the real
