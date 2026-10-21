@@ -51,7 +51,7 @@ const CSS = `
   100% { transform: translate3d(-50%, 0, 0); }
 }
 
-/* Pause only the hovered row */
+/* Pause only the hovered row (desktop) */
 @media (hover: hover) and (pointer: fine) {
   .sm-drs-row:hover .sm-drs-track {
     animation-play-state: paused !important;
@@ -136,6 +136,28 @@ function DualRowSlider({
 }) {
   ensureDrsStyles();
   const h = DReact.createElement;
+  const { useState, useRef, useEffect } = DReact;
+
+  // Tap-to-pause state, one flag per row, independent of the other row and
+  // of desktop :hover (which stays CSS-only so it keeps working unchanged).
+  const [paused1, setPaused1] = useState(false);
+  const [paused2, setPaused2] = useState(false);
+  // Off-screen rows still run via CSS keyframes (compositor-only, cheap) but
+  // there is no reason to keep them going at all while scrolled far away —
+  // pause both via a single shared observer instead of per-image listeners.
+  const [inView, setInView] = useState(true);
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: '200px 0px' }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   // Seamless looping requires duplicate items to form track 1 and track 2
   // We duplicate each row at least twice so the translation from 0 to -50% (or -50% to 0) is perfectly seamless.
@@ -149,6 +171,7 @@ function DualRowSlider({
   const speed2 = `${(speed * 1.05).toFixed(1)}s`; // subtle speed offset gives a natural, organic parallax feel
 
   return h('div', {
+    ref: wrapperRef,
     className: `sm-drs-wrapper ${className || ''}`.trim(),
     style: style || {},
     'aria-label': 'Studio M Instagram showcase gallery'
@@ -156,11 +179,12 @@ function DualRowSlider({
     // Row 1: Left to Right
     h('div', {
       className: 'sm-drs-row sm-drs-row-1',
-      'aria-label': 'Gallery row scrolling left to right'
+      'aria-label': 'Gallery row scrolling left to right. Tap a photo to pause or resume it.',
+      onClick: () => setPaused1(p => !p)
     },
       h('div', {
         className: 'sm-drs-track sm-drs-ltr',
-        style: { '--sm-speed': speed1 }
+        style: { '--sm-speed': speed1, animationPlayState: (!inView || paused1) ? 'paused' : 'running' }
       },
         fullRow1.map((item, idx) => renderPhoto(item, `r1-${idx}`, onCardClick))
       )
@@ -169,11 +193,12 @@ function DualRowSlider({
     // Row 2: Right to Left
     h('div', {
       className: 'sm-drs-row sm-drs-row-2',
-      'aria-label': 'Gallery row scrolling right to left'
+      'aria-label': 'Gallery row scrolling right to left. Tap a photo to pause or resume it.',
+      onClick: () => setPaused2(p => !p)
     },
       h('div', {
         className: 'sm-drs-track sm-drs-rtl',
-        style: { '--sm-speed': speed2 }
+        style: { '--sm-speed': speed2, animationPlayState: (!inView || paused2) ? 'paused' : 'running' }
       },
         fullRow2.map((item, idx) => renderPhoto(item, `r2-${idx}`, onCardClick))
       )

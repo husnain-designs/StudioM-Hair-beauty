@@ -135,7 +135,7 @@ button{font-family:inherit;color:inherit}
     </div>
   </sc-if>
   <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-    <div style="display:flex;gap:8px;overflow-x:auto;padding:8px 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+    <div style="display:flex;gap:8px;overflow-x:auto;padding:8px 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x">
       <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
         <a href="{{ c.hash }}" onClick="{{ c.jump }}" style="flex:0 0 auto;display:flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid {{ c.chipLine }};background:{{ c.chipBg }};color:{{ c.chipFg }};font-size:10.5px;font-weight:500;letter-spacing:.2em;transition:background .5s,color .5s,border-color .5s">{{ c.titleU }}</a>
       </sc-for>
@@ -458,7 +458,7 @@ button{font-family:inherit;color:inherit}
       <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">VISIT</p><address style="font-style:normal;font-size:16px;line-height:1.8">Allah Waali Market, Street 33<br>F-8/1, Islamabad, Pakistan</address></div>
       <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">HOURS</p><p style="margin:0;font-size:16px;line-height:1.8">Open 7 days<br>11:00 AM – 7:30 PM</p></div>
       <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">CONTACT</p><div style="display:flex;flex-direction:column;font-size:16px;line-height:1.8"><a href="tel:+92518357921" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">051 835 7921</a><a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Google Maps ↗</a></div></div>
-      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">FOLLOW</p><div style="display:flex;flex-direction:column;font-size:16px;line-height:1.8"><a href="https://www.instagram.com/studiom.f8/" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Instagram — @studiom.f8</a><a href="https://www.facebook.com/studiomislamabad/" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Facebook — Studio M Islamabad</a></div></div>
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">FOLLOW</p><div style="display:flex;align-items:center;gap:18px"><a href="https://www.instagram.com/studiom.f8/" target="_blank" rel="noopener" aria-label="Studio M on Instagram" style="display:flex;color:#5E5557;transition:color .4s" style-hover="color:#454143"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.6" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor"/></svg></a><a href="https://www.facebook.com/studiomislamabad/" target="_blank" rel="noopener" aria-label="Studio M on Facebook" style="display:flex;color:#5E5557;transition:color .4s" style-hover="color:#454143"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15.5 8.5h-2a1 1 0 0 0-1 1V12h3l-.4 3h-2.6v7h-3v-7H7.5v-3H9.5V9.1C9.5 6.8 11 5 13.4 5h2.1v3.5Z" fill="currentColor"/></svg></a></div></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:28px;border-top:1px solid rgba(69,65,67,.08);font-size:11px;letter-spacing:.12em;line-height:1.7;color:#5E5557">
       <span>© 2026 STUDIO M · F-8/1 ISLAMABAD</span>
@@ -540,10 +540,15 @@ class Component extends DCLogic {
     const vids = [...document.querySelectorAll('video[data-sync-video]')];
     if (!vids.length || vids[0] === this.vidEl) return;
     this.vidEl = vids[0]; this.vidIO && this.vidIO.disconnect();
-    const play = v => { const p = v.play(); p && p.catch(() => {}); };
+    // Responsive layouts duplicate this section (mobile/desktop markup), so
+    // more than one <video> with the same src can exist at once — only the
+    // one actually laid out (not display:none) should ever decode/play, or
+    // mobile ends up decoding the same clip twice at once for nothing.
+    const visible = v => v.offsetParent !== null;
+    const play = v => { if (!visible(v)) return; const p = v.play(); p && p.catch(() => {}); };
     vids.forEach(v => {
       v.muted = true; v.defaultMuted = true; v.loop = true;
-      v.addEventListener('ended', () => { if (this.vidInView) { v.currentTime = 0; play(v); } });
+      v.addEventListener('ended', () => { if (this.vidInView && visible(v)) { v.currentTime = 0; play(v); } });
     });
     const sec = document.getElementById('beauty') || vids[0];
     this.vidIO = new IntersectionObserver(([e]) => {
@@ -681,7 +686,7 @@ class Component extends DCLogic {
       isNarrow, isWide: !isNarrow, isMobile, isDesktop: !isMobile,
       bookingUrl: B, mapsUrl: MAPS, skinBook: book('Skin'),
       headerBg: scrolled && !menu ? 'rgba(248,243,236,.86)' : 'rgba(248,243,236,0)',
-      headerBlur: scrolled && !menu ? 'saturate(130%) blur(18px)' : 'none',
+      headerBlur: scrolled && !menu ? (isMobile ? 'saturate(130%) blur(6px)' : 'saturate(130%) blur(18px)') : 'none',
       headerLine: scrolled && !menu ? 'rgba(69,65,67,.08)' : 'rgba(69,65,67,0)',
       headerPadY: scrolled ? '12px' : (isNarrow ? '18px' : '28px'),
       barTop: scrolled ? '62px' : (isNarrow ? '73px' : '93px'),
