@@ -1,0 +1,19 @@
+{
+  "name": "studio-m-website",
+  "version": "1.0.0",
+  "description": "Studio M — Hair | Nail | Beauty salon in F-8 Islamabad website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "studio-m",
+    "salon",
+    "islamabad",
+    "beauty"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true
+}

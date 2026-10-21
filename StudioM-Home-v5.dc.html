@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Studio M — Hair | Nail | Beauty · F-8, Islamabad</title>
+<meta name="description" content="Studio M is a modern hair, nail and beauty salon in F-8/1, Islamabad. Hair, skin, nails, makeup, bridal and wellness, including Moroccan bath. Open 7 days, 11:00 AM – 7:30 PM.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#F8F3EC;color:#454143;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#454143;text-decoration:none}
+a:hover{color:#454143}
+button{font-family:inherit;color:inherit}
+::selection{background:#EFC6C7;color:#454143}
+:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+[data-noscrollbar]::-webkit-scrollbar{display:none}
+@keyframes smScrollCue{0%{transform:translateY(-100%)}100%{transform:translateY(260%)}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}[data-stream-card]{animation-duration:2.6s!important;animation-play-state:paused!important}[data-ish-card]{animation-duration:var(--ish-speed)!important;animation-play-state:paused!important}}
+</style>
+</helmet>
+
+<a href="#main" style="position:absolute;left:-9999px;top:8px;z-index:200;background:#454143;color:#F8F3EC;padding:12px 18px;font-size:12px" style-focus="left:8px">Skip to content</a>
+
+<header data-intro="0" data-intro-kind="down" style="position:fixed;top:0;left:0;right:0;z-index:90;background:{{ headerBg }};backdrop-filter:{{ headerBlur }};-webkit-backdrop-filter:{{ headerBlur }};border-bottom:1px solid {{ headerLine }};transition:background .8s cubic-bezier(.22,.61,.36,1),border-color .8s">
+  <div style="max-width:1680px;margin:0 auto;padding:{{ headerPadY }} clamp(20px,3.6vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .8s cubic-bezier(.22,.61,.36,1)">
+    <a href="#top" aria-label="Studio M — home" style="display:flex;flex-direction:column;gap:5px;line-height:1;color:#454143">
+      <img src="assets/studio-m-logo.svg" alt="" style="display:block;flex-shrink:0;width:156.8px;height:36.5px">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Primary" style="display:flex;align-items:center;gap:clamp(18px,2.2vw,34px)">
+        <a href="#top" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">HOME</a>
+        <a href="StudioM-Services-v5.dc.html" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">SERVICES</a>
+        <a href="#about" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">ABOUT</a>
+        <a href="#lookbook" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">LOOKBOOK</a>
+        <a href="#reviews" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">REVIEWS</a>
+        <a href="#contact" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">CONTACT</a>
+        <a href="{{ bookingUrl }}" style="display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 20px;margin-left:6px;white-space:nowrap;border:1px solid #B98287;font-size:10.5px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#EFC6C7,#EFC6C7) no-repeat left/0% 100%;transition:background-size .7s cubic-bezier(.65,0,.35,1),color .5s,gap .5s" style-hover="background-size:100% 100%;color:#454143;gap:18px">BOOK APPOINTMENT <span aria-hidden="true">→</span></a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-controls="mobile-menu" aria-label="{{ menuLabel }}" style="width:48px;height:48px;margin-right:-12px;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;cursor:pointer">
+        <span style="display:block;width:28px;height:1px;background:#454143;transform:{{ bar1 }};transition:transform .7s cubic-bezier(.65,0,.35,1)"></span>
+        <span style="display:block;width:28px;height:1px;background:#454143;transform:{{ bar2 }};transition:transform .7s cubic-bezier(.65,0,.35,1)"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <div id="mobile-menu" aria-hidden="{{ menuHidden }}" style="position:fixed;inset:0;z-index:85;background:#F8F3EC;clip-path:{{ menuClip }};visibility:{{ menuVis }};transition:clip-path 1s cubic-bezier(.65,0,.35,1),visibility 1s;display:flex;flex-direction:column;justify-content:space-between;padding:112px 24px calc(32px + env(safe-area-inset-bottom));overflow-y:auto">
+    <nav aria-label="Mobile" style="display:flex;flex-direction:column">
+      <a href="StudioM-Services-v5.dc.html" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);display:flex;justify-content:space-between;align-items:baseline;opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .3s,transform 1s .3s cubic-bezier(.16,1,.3,1)">Services</a>
+      <a href="#about" onClick="{{ closeMenu }}" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);display:flex;justify-content:space-between;align-items:baseline;opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .36s,transform 1s .36s cubic-bezier(.16,1,.3,1)"><em>About</em></a>
+      <a href="#lookbook" onClick="{{ closeMenu }}" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);display:flex;justify-content:space-between;align-items:baseline;opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .42s,transform 1s .42s cubic-bezier(.16,1,.3,1)">Lookbook</a>
+      <a href="#reviews" onClick="{{ closeMenu }}" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);display:flex;justify-content:space-between;align-items:baseline;opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .48s,transform 1s .48s cubic-bezier(.16,1,.3,1)"><em>Reviews</em></a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);display:flex;justify-content:space-between;align-items:baseline;opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .54s,transform 1s .54s cubic-bezier(.16,1,.3,1)">Visit</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:22px;padding-top:32px;opacity:{{ menuOp }};transition:opacity .8s .65s">
+      <a href="{{ bookingUrl }}" style="display:flex;align-items:center;justify-content:center;gap:14px;min-height:56px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;font-size:12px;line-height:1.7;color:#5E5557">
+        <span>F-8/1, Islamabad<br>Open 7 days · 11:00–7:30</span>
+        <a href="https://www.instagram.com/studiom.f8/" target="_blank" rel="noopener">@studiom.f8</a>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+
+<div style="position:relative">
+
+<section id="top" data-screen-label="Hero" aria-label="Studio M" style="position:sticky;top:0;height:{{ heroH }};min-height:560px;overflow:hidden;background:#F3D1D1;z-index:0">
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 64% 50% at 50% 58%,rgba(248,243,236,.85) 0%,rgba(246,217,217,.5) 50%,rgba(243,209,209,0) 78%)"></div>
+  <div data-hero-florals="" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
+    <div data-intro="4" data-intro-kind="fade" style="position:absolute;right:0;top:{{ flUrTop }};width:{{ flUrW }}"><img src="assets/florals/hero-ur.webp" alt="" style="display:block;width:100%;height:auto"></div>
+    <div data-intro="5" data-intro-kind="fade" style="position:absolute;left:0;top:{{ flLTop }};width:{{ flLW }}"><img src="assets/florals/hero-l.webp" alt="" style="display:block;width:100%;height:auto"></div>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div data-intro="6" data-intro-kind="fade" style="position:absolute;left:0;bottom:0;width:clamp(110px,9vw,170px);opacity:.75;transform:scaleY(-1)"><img src="assets/florals/hero-l.webp" alt="" style="display:block;width:100%;height:auto"></div>
+      <div data-intro="6" data-intro-kind="fade" style="position:absolute;right:2.4vw;bottom:19%;width:clamp(130px,11vw,210px)"><img src="assets/florals/hero-lr.webp" alt="" style="display:block;width:100%;height:auto"></div>
+      <div data-intro="7" data-intro-kind="fade" style="position:absolute;left:76%;top:31%;width:clamp(34px,3.4vw,62px)"><img data-petal="" src="assets/florals/hero-petal-a.webp" alt="" style="display:block;width:100%;height:auto"></div>
+      <div data-intro="7" data-intro-kind="fade" style="position:absolute;left:8.6%;top:20%;width:clamp(34px,3.4vw,62px)"><img data-petal="" src="assets/florals/hero-petal-b.webp" alt="" style="display:block;width:100%;height:auto"></div>
+    </sc-if>
+  </div>
+  <div data-hero-img="" style="position:absolute;inset:0;will-change:transform">
+    <x-import component="PanoramicSpreadHero" from="./PanoramicSpreadHero-blush.js" images="{{ panoImages }}" mode="{{ panoMode }}" scroll-distance="{{ panoDist }}" stage-offset="{{ panoOffset }}" text-end="{{ panoTextEnd }}" card-size="{{ panoCard }}" style="position:absolute;inset:0" hint-size="100%,100%">
+      <div data-hero-text="" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(14px,1.6vw,22px)">
+        <p style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.4em;padding-left:.4em;color:#5E5557"><span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span>F-8 / ISLAMABAD</p>
+        <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:{{ panoH1 }};line-height:.92;letter-spacing:-.025em;color:#454143;text-wrap:balance">Beauty in its <em style="color:#9E6A70">element.</em></h1>
+      </div>
+    </x-import>
+  </div>
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(243,209,209,.8) 0%,rgba(243,209,209,0) 18%,rgba(243,209,209,0) 70%,rgba(243,209,209,.92) 100%)"></div>
+  <div data-hero-veil="" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:#F8F3EC;opacity:0"></div>
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:multiply;background-image:url(&quot;data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'&gt;&lt;filter id='n'&gt;&lt;feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/&gt;&lt;/filter&gt;&lt;rect width='100%25' height='100%25' filter='url(%23n)'/&gt;&lt;/svg&gt;&quot;)"></div>
+
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="position:absolute;right:clamp(20px,3.6vw,56px);top:clamp(100px,14vh,136px);display:flex;align-items:center;gap:14px;pointer-events:none">
+      <p data-intro="3" data-intro-kind="fade" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.34em;color:#5E5557">HAIR • NAIL • BEAUTY</p>
+    </div>
+  </sc-if>
+
+  <div data-hero-cta="" style="position:absolute;left:clamp(20px,3.6vw,56px);right:clamp(20px,3.6vw,56px);bottom:calc(clamp(20px,4.4vh,44px) + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px;pointer-events:none">
+    <div style="display:flex;flex-direction:column;gap:18px;flex:{{ ctaFlex }};max-width:{{ ctaMax }}">
+      <p data-intro="5" style="margin:{{ descMargin }};max-width:360px;display:{{ heroDescDisp }};text-align:{{ ctaAlign }};font-size:14.5px;line-height:1.7;color:#5E5557">A modern beauty destination in F-8, Islamabad.</p>
+      <div data-intro="6" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 30px;pointer-events:auto">
+        <a href="{{ bookingUrl }}" style="flex:{{ ctaFlex }};display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:54px;padding:0 26px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em;transition:background .6s cubic-bezier(.22,.61,.36,1),gap .6s cubic-bezier(.22,.61,.36,1)" style-hover="background:#EFC6C7;color:#454143;box-shadow:inset 0 0 0 1px #454143;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+        <a href="StudioM-Services-v5.dc.html" style="flex:{{ ctaFlex }};display:inline-flex;align-items:center;justify-content:center;min-height:46px;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left bottom/100% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:30% 1px">EXPLORE SERVICES</a>
+      </div>
+    </div>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <div data-intro="7" data-intro-kind="fade" style="display:flex;align-items:flex-end;gap:28px">
+        <p style="margin:0;max-width:260px;text-align:right;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:20px;line-height:1.3;color:#7A4A50">“Beauty is not something to add. It is something to refine.”</p>
+        <div style="display: none; flex-direction: column; align-items: center; gap: 12px">
+          <span style="writing-mode:vertical-rl;font-size:9.5px;font-weight:500;letter-spacing:.34em;color:#5E5557">SCROLL</span>
+          <span style="position:relative;display:block;width:1px;height:52px;background:rgba(69,65,67,.2);overflow:hidden"><span data-stream-card="" style="position:absolute;left:0;top:0;width:1px;height:40%;background:#B98287;animation:smScrollCue 2.6s cubic-bezier(.65,0,.35,1) infinite"></span></span>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+</section>
+<div aria-hidden="true" style="height: {{ panoSpacer }}"></div>
+
+<main id="main" style="position:relative;z-index:1;background:#F8F3EC;box-shadow:0 -30px 60px rgba(69,65,67,.06)">
+
+<section aria-label="Studio M in numbers" data-screen-label="Social proof" style="background:#F8F3EC;border-bottom:1px solid rgba(185,130,135,.25)">
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(28px,3vw,44px) clamp(20px,3.6vw,56px);display:grid;grid-template-columns:{{ spCols }};justify-content:center;justify-items:center;align-items:center;gap:20px clamp(24px,3.4vw,64px)">
+    <div data-reveal="up" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:4px 12px;text-align:center">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,2.8vw,46px);line-height:1"><span data-count="4.4" data-dec="1">4.4</span><span style="font-size:.5em;color:#C8AA7A;margin-left:4px;vertical-align:.5em">★</span></span>
+      <span style="font-size:10px;font-weight:500;letter-spacing:.26em;color:#5E5557">GOOGLE RATING</span>
+    </div>
+    <span aria-hidden="true" style="display:{{ spDia }};width:6px;height:6px;background:#B98287;transform:rotate(45deg);opacity:.7"></span>
+    <div data-reveal="up" data-delay="90" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:4px 12px;text-align:center">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,2.8vw,46px);line-height:1"><span data-count="366">366</span><em style="color:#B98287">+</em></span>
+      <span style="font-size:10px;font-weight:500;letter-spacing:.26em;color:#5E5557">GOOGLE REVIEWS</span>
+    </div>
+    <span aria-hidden="true" style="display:{{ spDia }};width:6px;height:6px;background:#B98287;transform:rotate(45deg);opacity:.7"></span>
+    <div data-reveal="up" data-delay="180" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:4px 12px;text-align:center">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,2.8vw,46px);line-height:1"><span data-count="60">60</span>K<em style="color:#B98287">+</em></span>
+      <span style="font-size:10px;font-weight:500;letter-spacing:.26em;color:#5E5557">ON INSTAGRAM</span>
+    </div>
+    <span aria-hidden="true" style="display:{{ spDia }};width:6px;height:6px;background:#B98287;transform:rotate(45deg);opacity:.7"></span>
+    <div data-reveal="up" data-delay="270" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:4px 12px;text-align:center">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:clamp(34px,2.8vw,46px);line-height:1">F-8</span>
+      <span style="font-size:10px;font-weight:500;letter-spacing:.26em;color:#5E5557">ISLAMABAD</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience" data-screen-label="Brand statement" style="position:relative;isolation:isolate;overflow:hidden;background:#F6D9D9;color:#454143">
+  <div data-reveal="up" aria-hidden="true" style="position:absolute;left:-8px;bottom:-24px;z-index:-1;width:clamp(120px,18vw,300px);pointer-events:none"><img data-parallax="0.04" src="assets/florals/corner-l.svg" alt="" style="display:block;width:100%;height:auto"></div>
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(72px,8vw,136px) clamp(20px,3.6vw,56px);display:flex;flex-wrap:wrap;align-items:stretch;gap:clamp(36px,6vw,112px)">
+    <figure style="flex:1 1 360px;min-width:0;margin:0;display:flex;flex-direction:column;gap:16px">
+      <div data-reveal="clip" style="flex:1 1 auto;aspect-ratio:4/5;max-height:80svh;overflow:hidden;background:#D8C9C1;position:relative">
+        <div data-parallax="0.08" style="position:absolute;left:0;right:0;top:-8%;bottom:-8%">
+          <image-slot id="v3-brand" shape="rect" src="https://images.pexels.com/photos/7750099/pexels-photo-7750099.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" placeholder="Studio interior · 4:5" style="width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+      <figcaption data-reveal="up" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:10px;font-weight:500;letter-spacing:.24em;line-height:1.6;color:#5E5557"><span>THE STUDIO</span><span>ALLAH WAALI MARKET · STREET 33 · F-8/1</span></figcaption>
+    </figure>
+    <div style="flex:1.25 1 480px;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:clamp(36px,4.4vw,72px)">
+      <h2 data-reveal="up" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,4.7vw,88px);line-height:1.03;letter-spacing:-.015em;color:#454143;text-wrap:pretty">A modern destination for hair, nails, skin, beauty and wellness, <em style="color:#9E6A70">in the heart of F-8.</em></h2>
+      <div data-reveal="up" data-delay="120" style="align-self:flex-end;width:100%;max-width:460px;display:flex;flex-direction:column;gap:20px">
+        <span aria-hidden="true" style="display:block;width:48px;height:1px;background:#B98287"></span>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#514A4C;text-wrap:pretty">Studio M brings together hair, nails, skin, beauty and wellness in one considered space, combining professional expertise, quality products and a warm personal experience.</p>
+      </div>
+      <blockquote data-reveal="up" data-delay="200" style="margin:0;padding-top:clamp(24px,2.8vw,40px);border-top:1px solid rgba(185,130,135,.45);font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(28px,2.9vw,50px);line-height:1.14;color:#454143;text-wrap:balance">“Beauty is not something to add. It is something to refine.”</blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="services" data-screen-label="Featured services" style="background:#F2E9DE;position:relative">
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(80px,9vw,140px) clamp(20px,3.6vw,56px)">
+    <h2 data-reveal="up" style="margin:0 0 clamp(40px,5vw,80px);text-align:center;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(50px,6.6vw,120px);line-height:.88;letter-spacing:-.02em">Five disciplines.<br><em style="color:#B98287">One studio.</em></h2>
+    <div role="list" aria-label="Service categories" style="display:flex;align-items:flex-start;gap:clamp(14px,1.6vw,28px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(-1 * clamp(20px,3.6vw,56px));padding:0 clamp(20px,3.6vw,56px) 8px;scroll-padding:0 clamp(20px,3.6vw,56px)">
+      <sc-for list="{{ teaser }}" as="t" hint-placeholder-count="5">
+        <div role="listitem" data-reveal="up" data-delay="{{ t.delay }}" style="flex:0 0 {{ svcItemW }};min-width:0;margin-top:{{ t.mt }};scroll-snap-align:start;display:flex;flex-direction:column;gap:18px">
+          <div style="aspect-ratio:3/4;overflow:hidden;background:#D8C9C1;position:relative">
+            <div style="position:absolute;inset:0;transition:transform 1.6s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.05)">
+              <image-slot id="{{ t.img }}" shape="rect" data-src="{{ t.src }}" placeholder="{{ t.ph }}" style="width:100%;height:100%"></image-slot>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:1px solid rgba(69,65,67,.18)">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+              <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,2.6vw,46px);line-height:1;letter-spacing:-.01em;color:#454143">{{ t.title }}</h3>
+              <span style="font-size:10px;font-weight:500;letter-spacing:.24em;color:#9E6A70">{{ t.num }}</span>
+            </div>
+            <p style="margin:0;font-size:14px;line-height:1.65;color:#5E5557;text-wrap:pretty">{{ t.line }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div data-reveal="up" style="display:flex;justify-content:center;margin-top:clamp(44px,5vw,80px)">
+      <a href="StudioM-Services-v5.dc.html" style="display:inline-flex;align-items:center;justify-content:center;gap:16px;width:{{ ctaW }};min-height:60px;padding:0 40px;background:#454143 linear-gradient(#B98287,#B98287) no-repeat left/0% 100%;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.26em;transition:background-size .8s cubic-bezier(.65,0,.35,1),gap .6s" style-hover="background-size:100% 100%;gap:24px">EXPLORE ALL SERVICES <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="signature" data-screen-label="Signature" style="background:#F3D1D1;overflow:hidden">
+  <div style="display:flex;flex-wrap:wrap;align-items:stretch;min-height:{{ sigMinH }}">
+    <div data-reveal="clip" style="flex:1 1 480px;min-width:0;position:relative;min-height:{{ sigImgH }};overflow:hidden;background:#D8C9C1">
+      <div data-parallax="0.1" style="position:absolute;left:0;right:0;top:-8%;bottom:-8%">
+        <video ref="{{ sigVideoRef }}" poster="assets/signature-facial-poster.webp" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="none" width="720" height="1280" aria-label="Studio M Signature Korean Glass Skin Facial, filmed at the studio" style="display:block;width:100%;height:100%;object-fit:cover"></video>
+      </div>
+      <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(243,209,209,0) 70%,rgba(243,209,209,.35))"></div>
+      <button type="button" onClick="{{ toggleSigVideo }}" aria-label="{{ sigVideoLabel }}" style="position:absolute;left:clamp(16px,2vw,28px);bottom:clamp(16px,2vw,28px);z-index:2;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border:0;background:rgba(248,243,236,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#454143;font-size:10px;font-weight:500;letter-spacing:.22em;cursor:pointer;transition:background .4s" style-hover="background:#F8F3EC">{{ sigVideoText }}</button>
+    </div>
+    <div style="flex:1 1 440px;min-width:0;padding:clamp(64px,7vw,112px) clamp(20px,4.4vw,96px);display:flex;flex-direction:column;justify-content:center;gap:clamp(28px,3vw,44px)">
+      <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;color:#5E5557"><span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span>STUDIO M SIGNATURE</p>
+      <h2 data-reveal="up" data-delay="80" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,6.4vw,118px);line-height:.88;letter-spacing:-.02em">Korean<br>Glass Skin<br><em style="color:#9E6A70">Facial.</em></h2>
+      <p data-reveal="up" data-delay="140" style="margin:0;max-width:420px;font-size:16px;line-height:1.8;color:#5E5557;text-wrap:pretty">A hydration-focused facial built around premium Korean skincare, finished with LED light therapy.</p>
+      <ol data-reveal="up" data-delay="200" style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,2.6vw,48px);max-width:560px">
+        <li style="display:flex;align-items:baseline;gap:14px;padding:15px 0;border-top:1px solid rgba(185,130,135,.35)"><span style="font-size:10px;letter-spacing:.2em;color:#7A4A50">01</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,30px);font-style:italic">PDRN</span></li>
+        <li style="display:flex;align-items:baseline;gap:14px;padding:15px 0;border-top:1px solid rgba(185,130,135,.35)"><span style="font-size:10px;letter-spacing:.2em;color:#7A4A50">02</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,30px);font-style:italic">Peptides</span></li>
+        <li style="display:flex;align-items:baseline;gap:14px;padding:15px 0;border-top:1px solid rgba(185,130,135,.35)"><span style="font-size:10px;letter-spacing:.2em;color:#7A4A50">03</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,30px);font-style:italic">Rice enzymes</span></li>
+        <li style="display:flex;align-items:baseline;gap:14px;padding:15px 0;border-top:1px solid rgba(185,130,135,.35)"><span style="font-size:10px;letter-spacing:.2em;color:#7A4A50">04</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,30px);font-style:italic">Collagen</span></li>
+        <li style="display:flex;align-items:baseline;gap:14px;padding:15px 0;border-top:1px solid rgba(185,130,135,.35);border-bottom:1px solid rgba(185,130,135,.35)"><span style="font-size:10px;letter-spacing:.2em;color:#7A4A50">05</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,30px);font-style:italic">LED light therapy</span></li>
+        <li style="display:flex;align-items:baseline;gap:14px;padding:15px 0;border-top:1px solid rgba(185,130,135,.35);border-bottom:1px solid rgba(185,130,135,.35)"><span style="font-size:10px;letter-spacing:.2em;color:#7A4A50">06</span><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2vw,30px);font-style:italic">Hydration</span></li>
+      </ol>
+      <div data-reveal="up" data-delay="260">
+        <a href="{{ bookingUrl }}" style="display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:0 30px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em;transition:background .6s cubic-bezier(.22,.61,.36,1),gap .6s cubic-bezier(.22,.61,.36,1)" style-hover="background:#EFC6C7;color:#454143;box-shadow:inset 0 0 0 1px #454143;gap:22px">BOOK THE SIGNATURE FACIAL <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Quote" aria-label="Every detail matters" style="position:relative;height:{{ quoteH }};min-height:480px;overflow:hidden;background:#F8F3EC;display:flex;align-items:center;justify-content:center">
+  <div style="position:absolute;inset:0;overflow:hidden">
+    <div data-parallax="0.18" style="position:absolute;left:0;right:0;top:-14%;bottom:-14%">
+      <image-slot id="v3-quote" shape="rect" src="https://images.pexels.com/photos/17471377/pexels-photo-17471377.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2000" placeholder="Detail image — hands, nails or texture" style="width:100%;height:100%"></image-slot>
+    </div>
+  </div>
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,rgba(248,243,236,.66) 0%,rgba(248,243,236,.9) 70%),linear-gradient(180deg,#F8F3EC 0%,rgba(248,243,236,0) 18%,rgba(248,243,236,0) 82%,#F8F3EC 100%)"></div>
+  <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none"><div data-reveal="up"><img src="assets/florals/sprig.svg" alt="" style="display:block;height:clamp(300px,72vh,660px);width:auto;opacity:.55"></div></div>
+  <div style="position:relative;max-width:1200px;padding:0 clamp(20px,4vw,56px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:32px;pointer-events:none">
+    <span data-reveal="lineY" aria-hidden="true" style="display:block;width:1px;height:64px;background:#B98287;transform-origin:top"></span>
+    <blockquote data-reveal="up" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(64px,10vw,190px);line-height:.86;letter-spacing:-.025em;color:#454143">Every detail<br><em style="color:#9E6A70">matters.</em></blockquote>
+    <p data-reveal="up" data-delay="160" style="margin:0;font-size:10px;font-weight:500;letter-spacing:.34em;color:#5E5557">— STUDIO M</p>
+  </div>
+</section>
+
+<section id="wellness" data-screen-label="Moroccan Bath" style="background:#F6D9D9;overflow:hidden">
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(80px,9vw,140px) clamp(20px,3.6vw,56px);display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,90px);align-items:center">
+    <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+      <p data-reveal="up" style="margin:0;font-size:10px;font-weight:500;letter-spacing:.3em;color:#7A4A50">A PRIVATE RITUAL</p>
+      <h2 data-reveal="up" data-delay="80" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(60px,8vw,150px);line-height:.84;letter-spacing:-.025em">Moroccan<br><em style="color:#9E6A70">Bath.</em></h2>
+      <p data-reveal="up" data-delay="140" style="margin:0;max-width:400px;font-size:16px;line-height:1.8;color:#5E5557;text-wrap:pretty">Warmth, steam and stillness. A traditional bathing ritual, offered alongside the studio's spa and wellness treatments.</p>
+      <a data-reveal="up" data-delay="200" href="{{ bookingUrl }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid #B98287;color:#454143;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#EFC6C7,#EFC6C7) no-repeat left/0% 100%;transition:background-size .8s cubic-bezier(.65,0,.35,1),color .5s,gap .6s" style-hover="background-size:100% 100%;color:#454143;gap:20px">BOOK THE RITUAL <span aria-hidden="true">→</span></a>
+    </div>
+    <div style="flex:1.5 1 480px;min-width:0;position:relative;padding-bottom:clamp(40px,6vw,96px)">
+      <div data-reveal="clip" style="width:88%;margin-left:auto;aspect-ratio:4/5;max-height:880px;overflow:hidden;background:#D8C9C1;position:relative">
+        <div data-parallax="0.1" style="position:absolute;left:0;right:0;top:-8%;bottom:-8%">
+          <image-slot id="moroccan-main-photo" shape="rect" src="assets/moroccan-bath.webp" placeholder="Moroccan bath — warm low light, steam, stone · 4:5 (add Studio M or stock image)" style="width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+      <div data-reveal="clip" data-delay="220" style="position:absolute;left:0;bottom:0;width:38%;aspect-ratio:3/4;overflow:hidden;background:#D8C9C1;border:clamp(6px,.7vw,10px) solid #F6D9D9">
+        <image-slot id="moroccan-detail" shape="rect" placeholder="Detail — towels, oils, hands · 3:4" style="width:100%;height:100%"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lookbook" data-screen-label="Lookbook" style="background:#F2E9DE;color:#454143">
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(88px,9vw,150px) clamp(20px,3.6vw,56px) clamp(80px,8vw,130px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:clamp(36px,4.4vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <p data-reveal="up" style="margin:0;font-size:10px;font-weight:500;letter-spacing:.3em;color:#5E5557">THE STUDIO M</p>
+        <h2 data-reveal="up" data-delay="80" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:clamp(72px,11vw,210px);line-height:.8;letter-spacing:-.03em;color:#454143">Lookbook</h2>
+      </div>
+      <p data-reveal="up" data-delay="160" style="margin:0;font-size:10px;font-weight:500;letter-spacing:.26em;line-height:2.2;color:#5E5557">HAIR · COLOUR · NAILS<br>SKIN · MAKEUP · STUDIO</p>
+    </div>
+    <x-import component="MasonryGrid" from="./MasonryGrid.js" items="{{ lookItems }}" render-item="{{ renderLook }}" class-name="columns-2 lg:columns-3 xl:columns-4" gap="clamp(12px,1.6vw,28px)" stagger-delay="{{ lookStagger }}" hint-size="100%,1200px"></x-import>
+  </div>
+</section>
+
+<section id="instagram" data-screen-label="Instagram" style="position:relative;isolation:isolate;overflow:hidden;background:#EFC6C7">
+  <div data-reveal="up" aria-hidden="true" style="position:absolute;right:-8px;bottom:-24px;z-index:-1;width:clamp(120px,16vw,280px);pointer-events:none"><img data-parallax="0.04" src="assets/florals/corner-r.svg" alt="" style="display:block;width:100%;height:auto"></div>
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(88px,9vw,150px) 0 clamp(80px,8vw,130px)">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;margin-bottom:clamp(36px,4.5vw,60px);padding:0 clamp(20px,3.6vw,56px)">
+      <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:18px;font-size:10px;font-weight:500;letter-spacing:.32em;color:#5E5557"><span data-reveal="lineX" style="display:block;width:clamp(40px,8vw,120px);height:1px;background:#B98287;transform-origin:right"></span>FOLLOW THE STUDIO<span data-reveal="lineX" style="display:block;width:clamp(40px,8vw,120px);height:1px;background:#B98287;transform-origin:left"></span></p>
+      <a data-reveal="up" data-delay="80" href="https://www.instagram.com/studiom.f8/" target="_blank" rel="noopener" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,9vw,170px);line-height:.9;letter-spacing:-.025em;transition:color .6s" style-hover="color:#7A4A50">@studiom<em style="color:#9E6A70">.f8</em></a>
+    </div>
+    <div data-reveal="up" style="position:relative;width:100%;overflow:hidden">
+      <x-import component="DualRowSlider" from="./DualRowSlider.js" row1="{{ igRow1 }}" row2="{{ igRow2 }}" speed="{{ igSpeed }}" hint-size="100%,560px"></x-import>
+    </div>
+    <div data-reveal="up" style="display:flex;justify-content:center;margin-top:clamp(32px,3.6vw,52px);padding:0 clamp(20px,3.6vw,56px)">
+      <a href="https://www.instagram.com/studiom.f8/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 28px;border:1px solid #B98287;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#F8F3EC,#F8F3EC) no-repeat left/0% 100%;transition:background-size .8s cubic-bezier(.65,0,.35,1),color .5s,gap .6s" style-hover="background-size:100% 100%;color:#454143;gap:20px">FOLLOW ON INSTAGRAM <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" data-screen-label="Reviews" style="background:#F8F3EC;overflow:hidden">
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(80px,9vw,140px) clamp(20px,3.6vw,56px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(36px,4.4vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div data-reveal="up" data-delay="80" style="display:flex;align-items:flex-end;gap:20px">
+          <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(84px,9vw,150px);line-height:.78">4.4</span>
+          <span style="display:flex;flex-direction:column;gap:8px;padding-bottom:8px"><span aria-hidden="true" style="color:#C8AA7A;letter-spacing:.2em;font-size:14px">★★★★★</span><span style="font-size:10px;font-weight:500;letter-spacing:.24em;color:#5E5557">366+ REVIEWS ON GOOGLE</span></span>
+        </div>
+      </div>
+      <div data-reveal="up" data-delay="160" style="display:flex;gap:10px">
+        <button type="button" onClick="{{ prevRev }}" aria-label="Previous review" style="width:56px;height:56px;border:1px solid #B98287;border-radius:50%;background:none;cursor:pointer;font-size:16px;transition:background .5s,color .5s,border-color .5s" style-hover="background:#454143;color:#F8F3EC;border-color:#454143">←</button>
+        <button type="button" onClick="{{ nextRev }}" aria-label="Next review" style="width:56px;height:56px;border:1px solid #B98287;border-radius:50%;background:none;cursor:pointer;font-size:16px;transition:background .5s,color .5s,border-color .5s" style-hover="background:#454143;color:#F8F3EC;border-color:#454143">→</button>
+      </div>
+    </div>
+    <div data-reveal="up" data-delay="120" ref="{{ revRef }}" data-noscrollbar="" role="region" aria-label="Client reviews" tabindex="0" onMouseEnter="{{ dragEnter }}" onMouseLeave="{{ dragLeave }}" onPointerDown="{{ dragStart }}" onPointerMove="{{ dragMove }}" onPointerUp="{{ dragEnd }}" onPointerCancel="{{ dragEnd }}" style="display:flex;gap:clamp(16px,2vw,32px);overflow-x:auto;scroll-snap-type:{{ snapType }};-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 calc(-1 * clamp(20px,3.6vw,56px));padding:0 clamp(20px,3.6vw,56px);scroll-padding:0 clamp(20px,3.6vw,56px);cursor:{{ dragCursor }};user-select:none">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="2">
+        <figure style="flex:0 0 {{ revCardW }};scroll-snap-align:start;margin:0;padding:clamp(28px,3.4vw,56px) 0 0;border-top:1px solid rgba(185,130,135,.4);display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+          <blockquote style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:clamp(32px,3.6vw,60px);line-height:1.1;letter-spacing:-.01em;text-wrap:pretty">“{{ r.quote }}”</blockquote>
+          <figcaption style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 20px">
+            <span style="display:flex;flex-direction:column;gap:5px"><span style="font-size:14px;font-weight:600;letter-spacing:.04em">{{ r.name }}</span><span style="font-size:10px;font-weight:500;letter-spacing:.22em;color:#5E5557">{{ r.meta }}</span></span>
+            <span aria-label="Rated 5 out of 5" style="color:#C8AA7A;letter-spacing:.18em;font-size:12px">★★★★★</span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+    <div data-reveal="up" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:clamp(32px,3.6vw,52px)">
+      <p style="margin:0;font-size:12px;line-height:1.7;color:#5E5557">Excerpts from public client reviews, quoted as written.</p>
+      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;min-height:44px;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/100% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:30% 1px">VIEW ALL GOOGLE REVIEWS <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="about" data-screen-label="About" style="background:#F2E9DE;color:#454143">
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(88px,9vw,150px) clamp(20px,3.6vw,56px) clamp(80px,8vw,130px);display:flex;flex-wrap:wrap;align-items:center;gap:clamp(48px,5.6vw,100px)">
+    <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:clamp(28px,3vw,44px)">
+      <h2 data-reveal="up" data-delay="80" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(52px,6.4vw,118px);line-height:.88;letter-spacing:-.02em;color:#454143">Refined beauty.<br><em style="color:#B98287">Personal attention.</em></h2>
+      <p data-reveal="up" data-delay="140" style="margin:0;max-width:480px;font-size:16px;line-height:1.8;color:#514A4C;text-wrap:pretty">Hair, skin, nails, beauty and wellness, under one roof in F-8 Islamabad.</p>
+      <div data-reveal="up" data-delay="200" style="display:flex;flex-direction:column;max-width:560px">
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;padding:22px 0;border-top:1px solid rgba(185,130,135,.45)"><span style="font-size:10px;font-weight:500;letter-spacing:.2em;color:#7A4A50;padding-top:9px">I</span><span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1;color:#454143">Professional service</span><span></span><span style="font-size:14.5px;line-height:1.7;color:#514A4C">A trained team across hair, nails, skin and makeup.</span></div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;padding:22px 0;border-top:1px solid rgba(185,130,135,.45)"><span style="font-size:10px;font-weight:500;letter-spacing:.2em;color:#7A4A50;padding-top:9px">II</span><span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1;color:#454143">Quality products</span><span></span><span style="font-size:14.5px;line-height:1.7;color:#514A4C">Professional products, including premium Korean skincare.</span></div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;padding:22px 0;border-top:1px solid rgba(185,130,135,.45);border-bottom:1px solid rgba(185,130,135,.45)"><span style="font-size:10px;font-weight:500;letter-spacing:.2em;color:#7A4A50;padding-top:9px">III</span><span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1;color:#454143">Personal attention</span><span></span><span style="font-size:14.5px;line-height:1.7;color:#514A4C">A warm, personal approach at every appointment.</span></div>
+      </div>
+    </div>
+    <div style="flex:1 1 440px;min-width:0;position:relative;padding-bottom:clamp(48px,8vw,120px)">
+      <div data-reveal="clip" style="position:relative;width:78%;aspect-ratio:4/5;overflow:hidden;background:#D8C9C1">
+        <div data-parallax="0.08" style="position:absolute;left:0;right:0;top:-8%;bottom:-8%">
+          <image-slot id="v3-about-interior" shape="rect" src="assets/about-interior.webp" placeholder="Studio interior · 4:5" style="width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+      <div data-reveal="clip" data-delay="220" style="position:absolute;right:0;bottom:0;width:46%;aspect-ratio:1;overflow:hidden;background:#D8C9C1;border:clamp(6px,.7vw,10px) solid #F2E9DE">
+        <image-slot id="v3-about-detail" shape="rect" src="https://images.pexels.com/photos/19239100/pexels-photo-19239100.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" placeholder="Hands at work · 1:1" style="width:100%;height:100%"></image-slot>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-screen-label="Location" style="background:#F8F3EC">
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(88px,9vw,150px) clamp(20px,3.6vw,56px) clamp(80px,8vw,130px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(36px,4vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <h2 data-reveal="up" data-delay="80" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(56px,7.4vw,140px);line-height:.86;letter-spacing:-.02em">Visit<br><em style="color:#B98287">Studio M.</em></h2>
+      </div>
+      <p data-reveal="up" data-delay="140" style="margin:0;font-size:10px;font-weight:500;letter-spacing:.26em;line-height:2.1;color:#5E5557;text-align:right">F-8/1 · ISLAMABAD<br>33.71° N — 73.04° E</p>
+    </div>
+    <div data-reveal="clip" style="width:100%;aspect-ratio:{{ extRatio }};overflow:hidden;background:#D8C9C1;position:relative">
+      <div data-parallax="0.1" style="position:absolute;left:0;right:0;top:-8%;bottom:-8%">
+        <image-slot id="exterior-storefront" shape="rect" src="assets/exterior.webp" placeholder="Salon exterior (real Studio M photo) — graphite façade, warm interior light, champagne signage · wide" style="width:100%;height:100%"></image-slot>
+      </div>
+    </div>
+    <div data-reveal="up" data-delay="120" style="position:relative;z-index:2;width:min(100%,680px);margin:clamp(-200px,-13vw,-48px) 0 0 clamp(0px,5vw,96px);background:#F8F3EC;padding:clamp(28px,4vw,64px) clamp(20px,4vw,64px) 0;display:flex;flex-direction:column;gap:36px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:32px">
+        <div style="display:flex;flex-direction:column;gap:12px"><p style="margin:0;font-size:10px;font-weight:500;letter-spacing:.26em;color:#7A4A50">ADDRESS</p><address style="font-style:normal;font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.22">Allah Waali Market<br>Street 33<br>F-8/1, Islamabad</address></div>
+        <div style="display:flex;flex-direction:column;gap:12px"><p style="margin:0;font-size:10px;font-weight:500;letter-spacing:.26em;color:#7A4A50">HOURS</p><p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.22">Open 7 days<br>11:00 AM – 7:30 PM</p><a href="tel:+92518357921" style="font-size:14px;margin-top:6px;color:#5E5557;transition:color .4s" style-hover="color:#7A4A50">051 835 7921</a></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px">
+        <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:0 30px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em;transition:background .6s cubic-bezier(.22,.61,.36,1),gap .6s cubic-bezier(.22,.61,.36,1)" style-hover="background:#EFC6C7;color:#454143;box-shadow:inset 0 0 0 1px #454143;gap:22px">GET DIRECTIONS <span aria-hidden="true">↗</span></a>
+        <a href="tel:+92518357921" style="display:inline-flex;align-items:center;min-height:44px;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left bottom/100% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:30% 1px">CALL THE STUDIO</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Final CTA" aria-label="Book an appointment" style="position:relative;isolation:isolate;min-height:{{ ctaH }};overflow:hidden;display:flex;align-items:center;justify-content:center;background:#EFC6C7">
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse 46% 42% at 50% 42%,rgba(246,217,217,.85) 0%,rgba(239,198,199,0) 100%)"></div>
+  <div data-reveal="up" aria-hidden="true" style="position:absolute;left:-12px;bottom:-48px;z-index:-1;width:clamp(170px,34vw,620px);pointer-events:none"><img data-parallax="0.05" src="assets/florals/cta-left.svg?v=2" alt="" style="display:block;width:100%;height:auto"></div>
+  <div data-reveal="up" data-delay="180" aria-hidden="true" style="position:absolute;right:-12px;bottom:-48px;z-index:-1;width:clamp(170px,34vw,620px);pointer-events:none"><img data-parallax="0.07" src="assets/florals/cta-right.svg?v=2" alt="" style="display:block;width:100%;height:auto"></div>
+  <div style="width:100%;max-width:1000px;margin:0 auto;padding:clamp(96px,9vw,140px) clamp(20px,3.6vw,56px) clamp(220px,18vw,270px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(26px,2.8vw,40px)">
+    <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;padding-left:.3em;color:#7A4A50"><span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span>STUDIO M · F-8 ISLAMABAD<span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span></p>
+    <h2 data-reveal="up" data-delay="80" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(46px,6.2vw,116px);line-height:.9;letter-spacing:-.02em;color:#454143;text-wrap:balance">Your next<br>beauty experience<br><em style="color:#865258">starts here.</em></h2>
+    <p data-reveal="up" data-delay="140" style="margin:0;max-width:420px;font-size:16px;line-height:1.8;color:#5E5557;text-wrap:pretty">Hair, beauty, skin, nails and wellness — all at Studio M.</p>
+    <div data-reveal="up" data-delay="200" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 32px">
+      <a href="{{ bookingUrl }}" style="display:inline-flex;align-items:center;gap:14px;min-height:58px;padding:0 32px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em;transition:background .6s cubic-bezier(.22,.61,.36,1),color .6s,box-shadow .6s,gap .6s cubic-bezier(.22,.61,.36,1)" style-hover="background:#F8F3EC;color:#454143;box-shadow:inset 0 0 0 1px #454143;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;font-size:11px;font-weight:500;letter-spacing:.22em;color:#454143;background:linear-gradient(#454143,#454143) no-repeat left bottom/100% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:30% 1px">GET DIRECTIONS</a>
+    </div>
+    <p data-reveal="up" data-delay="260" style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:#7A4A50">“Your beauty deserves its own space.”</p>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="position:relative;isolation:isolate;overflow:hidden;background:#F2E9DE;color:#5E5557;border-top:1px solid rgba(185,130,135,.3)">
+  <div data-reveal="up" aria-hidden="true" style="position:absolute;right:clamp(16px,3vw,48px);top:clamp(14px,2vw,28px);z-index:-1;width:clamp(120px,14vw,220px);pointer-events:none"><img src="assets/florals/footer-sprig.svg" alt="" style="display:block;width:100%;height:auto"></div>
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(64px,7vw,110px) clamp(20px,3.6vw,56px) {{ footerPadBottom }};display:flex;flex-direction:column;gap:clamp(44px,5vw,72px)">
+    <div style="display:flex;justify-content:center">
+      <a href="#top" aria-label="Studio M — back to top" style="display:flex;line-height:1">
+        <img src="assets/studio-m-logo.svg" alt="" style="display:block;flex-shrink:0;max-width:100%;width:auto;height:calc(clamp(52px,9vw,150px) + 25px)">
+      </a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:44px 32px;padding-top:44px;border-top:1px solid rgba(69,65,67,.12)">
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">VISIT</p><address style="font-style:normal;font-size:16px;line-height:1.8">Allah Waali Market, Street 33<br>F-8/1, Islamabad, Pakistan</address></div>
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">HOURS</p><p style="margin:0;font-size:16px;line-height:1.8">Open 7 days<br>11:00 AM – 7:30 PM</p></div>
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">CONTACT</p><div style="display:flex;flex-direction:column;font-size:16px;line-height:1.8"><a href="tel:+92518357921" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">051 835 7921</a><a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Google Maps ↗</a></div></div>
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">FOLLOW</p><div style="display:flex;flex-direction:column;font-size:16px;line-height:1.8"><a href="https://www.instagram.com/studiom.f8/" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Instagram — @studiom.f8</a><a href="https://www.facebook.com/studiomislamabad/" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Facebook — Studio M Islamabad</a></div></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:28px;border-top:1px solid rgba(69,65,67,.08);font-size:11px;letter-spacing:.12em;line-height:1.7;color:#5E5557">
+      <span>© 2026 STUDIO M · F-8/1 ISLAMABAD</span>
+      <span>Temporary stock photography (Pexels) pending Studio M imagery.</span>
+      <a href="#top" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">BACK TO TOP ↑</a>
+    </div>
+  </div>
+</footer>
+
+</main>
+</div>
+
+<sc-if value="{{ stickyShow }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(248,243,236,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid rgba(69,65,67,.1);transform:{{ stickyTf }};transition:transform .9s cubic-bezier(.16,1,.3,1)">
+    <a href="{{ bookingUrl }}" style="flex:1.7;display:flex;align-items:center;justify-content:center;min-height:50px;background:#454143;color:#F8F3EC;font-size:10.5px;font-weight:500;letter-spacing:.2em">BOOK AN APPOINTMENT</a>
+    <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;border:1px solid #B98287;font-size:10.5px;font-weight:500;letter-spacing:.2em">DIRECTIONS</a>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;spreadTrigger&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;On load&quot;,&quot;On scroll&quot;],&quot;default&quot;:&quot;On load&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;StudioM-Booking.dc.html&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Booking&quot;},&quot;stickyCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Booking&quot;}}">
+const PX = id => 'https://images.pexels.com/photos/' + id + '/pexels-photo-' + id + '.jpeg?auto=compress&cs=tinysrgb&w=1400';
+const SVC = 'StudioM-Services-v5.dc.html';
+const SIG_VIDEO = 'assets/signature-facial-web.mp4';
+// Temporary Pexels imagery for the hero stream — replace IDs/URLs with Studio M photography.
+const STREAM = [3065171, 17471377, 3738349, 7440054, 18730147, 3813896, 19239100, 3993312, 20593111, 16363470, 19242406, 7750099, 14267564];
+// Temporary Pexels imagery for the panoramic hero (centre = indices 3–4). Replace with Studio M photography.
+const PANO = [['storefront', 'Studio M storefront, F-8 Islamabad'], ['nails', 'Burgundy nail art'], ['curls', 'Caramel balayage waves'], ['bridal', 'Bridal hair and makeup'], ['balayage', 'Curly colour, violet to copper'], ['henna', 'Mehndi and ombré nails'], ['updo', 'Bridal updo with pearl pin'], ['spa', 'Hair spa treatment']];
+const DESKTOP_PATH = { cardWidth: 18, cardHeight: 26 };
+const MOBILE_PATH = { cardWidth: 34, cardHeight: 48, birthHeight: 5, exitHeight: 88, railBirth: -20, railExit: 78, perspective: 34 };
+const SPX = id => 'https://images.pexels.com/photos/' + id + '/pexels-photo-' + id + '.jpeg?auto=compress&cs=tinysrgb&w=640';
+const TEASER = [
+  { title: 'Hair', key: 'hair', px: 7440054, line: 'Cut, colour, treatments and styling.' },
+  { title: 'Skin', key: 'skin', px: 19242406, line: 'Facials, dermaplaning and advanced skin treatments.' },
+  { title: 'Nails', key: 'nails', px: 19239100, line: 'Manicure, pedicure and mani-pedi.' },
+  { title: 'Beauty', key: 'beauty', px: 3813896, line: 'Makeup and beauty treatments.' },
+  { title: 'Wellness', key: 'wellness', px: 3865676, line: 'The Moroccan bath and spa treatments.' }
+];
+// Studio M Lookbook photography.
+const LOOKS = [
+  { ar: '1440/1729', alt: 'Bridal look in an orange lehenga with gold jewellery, outdoors', src: 'assets/lookbook/look-01-600.webp', srcSet: 'assets/lookbook/look-01-600.webp 600w, assets/lookbook/look-01-1200.webp 1200w' },
+  { ar: '1440/1689', alt: 'Loose bridal braid with pearl accents and a statement jhoomar', src: 'assets/lookbook/look-02-600.webp', srcSet: 'assets/lookbook/look-02-600.webp 600w, assets/lookbook/look-02-1200.webp 1200w' },
+  { ar: '1440/1796', alt: 'Red bridal makeup with a pearl-and-ruby matha patti and floral bun', src: 'assets/lookbook/look-03-600.webp', srcSet: 'assets/lookbook/look-03-600.webp 600w, assets/lookbook/look-03-1200.webp 1200w' },
+  { ar: '1/1', alt: 'Soft voluminous blow-dry with glowing makeup', src: 'assets/lookbook/look-04-600.webp', srcSet: 'assets/lookbook/look-04-600.webp 600w, assets/lookbook/look-04-1130.webp 1130w' },
+  { ar: '4/5', alt: 'Mehndi look with fresh flower jewellery and a loose updo', src: 'assets/lookbook/look-05-600.webp', srcSet: 'assets/lookbook/look-05-600.webp 600w, assets/lookbook/look-05-1200.webp 1200w' },
+  { ar: '4/5', alt: 'Evening glam with soft smoky eyes and long brunette waves', src: 'assets/lookbook/look-06-600.webp', srcSet: 'assets/lookbook/look-06-600.webp 600w, assets/lookbook/look-06-1200.webp 1200w' },
+  { ar: '3/4', alt: 'Soft glam with a sleek half-up style and silver jewellery', src: 'assets/lookbook/look-07-600.webp', srcSet: 'assets/lookbook/look-07-600.webp 600w, assets/lookbook/look-07-1200.webp 1200w' },
+  { ar: '3/4', alt: 'Bridal makeup in rose tones with a gold dupatta', src: 'assets/lookbook/look-08-600.webp', srcSet: 'assets/lookbook/look-08-600.webp 600w, assets/lookbook/look-08-1200.webp 1200w' },
+  { ar: '3/4', alt: 'Sleek centre-part hair and glowing makeup with a hibiscus flower', src: 'assets/lookbook/look-09-600.webp', srcSet: 'assets/lookbook/look-09-600.webp 600w, assets/lookbook/look-09-1200.webp 1200w' },
+  { ar: '918/1070', alt: 'Blush formal look with a low bun and gold tikka', src: 'assets/lookbook/look-10-600.webp', srcSet: 'assets/lookbook/look-10-600.webp 600w, assets/lookbook/look-10-918.webp 918w' },
+  { ar: '3/4', alt: 'Mehndi bride in yellow with floral jewellery', src: 'assets/lookbook/look-11-480.webp', srcSet: 'assets/lookbook/look-11-480.webp 480w' },
+  { ar: '824/1010', alt: 'Glossy chestnut waves with bronzed makeup', src: 'assets/lookbook/look-12-600.webp', srcSet: 'assets/lookbook/look-12-600.webp 600w, assets/lookbook/look-12-824.webp 824w' }
+];
+const LOOK_SIZES = '(min-width:1440px) 25vw, (min-width:1024px) 33vw, 50vw';
+const IG = [14267564, 3813896, 20593111, 7440054, 19239100, 3738349];
+const IG_MT = ['0px', 'clamp(16px,4vw,80px)', 'clamp(6px,1.4vw,24px)', 'clamp(24px,5.4vw,104px)', 'clamp(4px,.8vw,12px)', 'clamp(14px,3.4vw,60px)'];
+const REVIEWS = [
+  { quote: 'Been at the Studio thrice and everytime the quality of their service is great.', name: 'miM87', meta: 'PUBLIC REVIEW · OCT 2023' },
+  { quote: 'Fantabulous experience! … studio M was the best decision ever!', name: 'rija', meta: 'MASSAGE + MOROCCAN BATH · JUL 2023' },
+  { quote: 'Got my services done from Studio M and i\u2019m highly satisfied.', name: 'Maya', meta: 'PUBLIC REVIEW · OCT 2023' },
+  { quote: 'Rozi baji is so sweet and professional, she makes the client so comfortable.', name: 'rija', meta: 'SPA · JUL 2023' }
+];
+const MAPS = 'https://www.google.com/maps/search/?api=1&query=Studio+M+Hair+Nail+Beauty+Salon+Allah+Waali+Market+F-8%2F1+Islamabad';
+const OUT = 'cubic-bezier(.16,1,.3,1)', INOUT = 'cubic-bezier(.65,0,.35,1)';
+const BP = 1080;
+
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, past: false, menu: false, svc: -1, look: -1, cursor: '', dragging: false };
+  revRef = React.createRef(); cursorRef = React.createRef(); previewRef = React.createRef();
+  mx = 0; my = 0; cx = 0; cy = 0; px = 0; py = 0;
+
+  syncSlots() {
+    document.querySelectorAll('image-slot[data-src]').forEach(el => { const v = el.dataset.src; if (v && v.indexOf('{{') < 0 && el.getAttribute('src') !== v) el.setAttribute('src', v); });
+  }
+  componentDidMount() {
+    this.syncSlots();
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.fine = window.matchMedia('(pointer: fine)').matches;
+    const sv = this.sigVideo && this.sigVideo.current;
+    if (sv) {
+      sv.muted = true; sv.loop = true; sv.playsInline = true;
+      sv.setAttribute('muted', ''); sv.setAttribute('playsinline', ''); sv.setAttribute('loop', '');
+      this.sigLoad = () => { if (!sv.getAttribute('src')) { sv.preload = 'auto'; sv.src = SIG_VIDEO; } };
+      this.sigPlay = () => { this.sigLoad(); sv.play().catch(() => this.setState({ sigPaused: true })); };
+      if (this.reduced) this.setState({ sigPaused: true });
+      if ('IntersectionObserver' in window) {
+        this.sigNear = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting) && !this.reduced) this.sigLoad(); }, { rootMargin: '600px 0px' });
+        this.sigVis = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) { if (!this.reduced && !this.sigUserPaused) this.sigPlay(); }
+          else if (!sv.paused) sv.pause();
+        }), { threshold: 0.2 });
+        this.sigNear.observe(sv); this.sigVis.observe(sv);
+      } else if (!this.reduced) this.sigPlay();
+    }
+    this.onResize = () => { this.setState({ w: window.innerWidth }, () => requestAnimationFrame(() => this.fitHero())); this.tick(); };
+    this.waitHero();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.fitHero());
+    this.onScroll = () => {
+      const y = window.scrollY, s = y > 40, p = y > window.innerHeight * 0.8;
+      if (s !== this.state.scrolled || p !== this.state.past) this.setState({ scrolled: s, past: p });
+      this.tick();
+    };
+    this.onMouse = e => { this.mx = e.clientX; this.my = e.clientY; if (!this.loop) this.follow(); };
+    this.onKey = e => { if (e.key === 'Escape' && this.state.menu) this.setMenu(false); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('mousemove', this.onMouse, { passive: true });
+    window.addEventListener('keydown', this.onKey);
+    this.onScroll();
+    requestAnimationFrame(() => { this.intro(); this.setupReveal(); this.fx(); this.petals(); });
+  }
+  petals() {
+    if (this.reduced) return;
+    document.querySelectorAll('[data-petal]').forEach((el, i) => {
+      if (el.__drift) return; el.__drift = 1;
+      const s = i % 2 ? -1 : 1;
+      el.animate([
+        { transform: 'translate(0,0) rotate(0deg)' },
+        { transform: `translate(${s * 10}px,14px) rotate(${s * 9}deg)` },
+        { transform: `translate(${s * -4}px,26px) rotate(${s * -4}deg)` },
+        { transform: 'translate(0,0) rotate(0deg)' }
+      ], { duration: 11000 + i * 2600, iterations: Infinity, easing: 'ease-in-out' });
+    });
+  }
+  componentWillUnmount() {
+    clearTimeout(this._heroT); this.heroRO && this.heroRO.disconnect();
+    ['resize', 'scroll', 'mousemove', 'keydown'].forEach((ev, i) => window.removeEventListener(ev, [this.onResize, this.onScroll, this.onMouse, this.onKey][i]));
+    if (this.io) this.io.disconnect();
+    if (this.sigNear) this.sigNear.disconnect();
+    if (this.sigVis) this.sigVis.disconnect();
+    cancelAnimationFrame(this.loop);
+    document.body.style.overflow = '';
+  }
+  componentDidUpdate() {
+    this.syncSlots(); this.setupReveal(); }
+
+  follow() {
+    const step = () => {
+      this.cx += (this.mx - this.cx) * 0.2; this.cy += (this.my - this.cy) * 0.2;
+      this.px += (this.mx - this.px) * 0.1; this.py += (this.my - this.py) * 0.1;
+      const c = this.cursorRef.current, p = this.previewRef.current;
+      if (c) c.style.transform = 'translate3d(' + this.cx.toFixed(1) + 'px,' + this.cy.toFixed(1) + 'px,0)';
+      if (p) p.style.transform = 'translate3d(' + this.px.toFixed(1) + 'px,' + this.py.toFixed(1) + 'px,0) rotate(' + Math.max(-6, Math.min(6, (this.mx - this.px) * 0.04)).toFixed(2) + 'deg)';
+      const moving = Math.abs(this.mx - this.px) + Math.abs(this.my - this.py) > 0.4;
+      this.loop = moving ? requestAnimationFrame(step) : 0;
+    };
+    this.loop = requestAnimationFrame(step);
+  }
+  tick() { if (this.raf) return; this.raf = requestAnimationFrame(() => { this.raf = 0; this.fx(); }); }
+  fx() {
+    if (this.reduced) return;
+    const vh = window.innerHeight, k = window.innerWidth < BP ? 0.5 : 1;
+    const p = Math.min(1, Math.max(0, (window.scrollY - (this.spacerPx || 0)) / vh));
+    const img = document.querySelector('[data-hero-img]'), txt = document.querySelector('[data-hero-text]'), veil = document.querySelector('[data-hero-veil]');
+    if (img) img.style.transform = 'scale(' + (1.08 - 0.08 * p).toFixed(4) + ') translate3d(0,' + (p * 6).toFixed(2) + '%,0)';
+    if (txt) { txt.style.transform = 'translate3d(0,' + (-p * 140 * k).toFixed(1) + 'px,0)'; txt.style.opacity = String(Math.max(0, 1 - p * 1.5).toFixed(3)); }
+    if (veil) veil.style.opacity = String((p * 0.75).toFixed(3));
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -300 || r.top > vh + 300) return;
+      el.style.transform = 'translate3d(0,' + (-((r.top + r.height / 2) - vh / 2) * (+el.dataset.parallax) * k).toFixed(1) + 'px,0)';
+    });
+  }
+  intro() {
+    if (this.reduced) return;
+    const m = window.innerWidth < BP;
+    document.querySelectorAll('[data-intro]').forEach(el => {
+      if (el.__intro) return; el.__intro = 1;
+      const i = +el.dataset.intro || 0, k = el.dataset.introKind, d = 250 + i * 150;
+      const A = (f, o) => el.animate(f, Object.assign({ fill: 'backwards' }, o));
+      if (k === 'aperture') A([{ clipPath: 'inset(18% 22% 18% 22%)', opacity: 0 }, { opacity: 1, offset: 0.25 }, { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 }], { duration: m ? 1300 : 1600, delay: 60, easing: INOUT });
+      else if (k === 'zoom') A([{ transform: 'scale(1.18)' }, { transform: 'scale(1)' }], { duration: 2800, delay: 60, easing: OUT });
+      else if (k === 'breathe') el.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.035)' }], { duration: 18000, delay: 2900, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+      else if (k === 'line') A([{ transform: 'translateY(108%)' }, { transform: 'translateY(0)' }], { duration: 1400, delay: 300 + i * 160, easing: OUT });
+      else if (k === 'down') A([{ opacity: 0, transform: 'translateY(-14px)' }, { opacity: 1, transform: 'none' }], { duration: 1100, delay: 900, easing: OUT });
+      else if (k === 'fade') A([{ opacity: 0 }, { opacity: 1 }], { duration: 1200, delay: d + 400, easing: OUT });
+      else if (k === 'lineX') A([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 1600, delay: d + 300, easing: INOUT });
+      else if (k === 'draw') A([{ strokeDasharray: '1', strokeDashoffset: '1' }, { strokeDasharray: '1', strokeDashoffset: '0' }], { duration: 2400, delay: 900 + i * 120, easing: INOUT });
+      else A([{ opacity: 0, transform: 'translateY(' + (m ? 14 : 22) + 'px)' }, { opacity: 1, transform: 'none' }], { duration: 1200, delay: d + 350, easing: OUT });
+    });
+  }
+  setupReveal() {
+    if (this.reduced || !('IntersectionObserver' in window)) return;
+    if (!this.io) this.io = new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting) { const ts = en.target.__rvKids || [en.target]; this.io.unobserve(en.target); ts.forEach(t => this.show(t)); }
+    }), { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+    const vh = window.innerHeight, m = window.innerWidth < BP;
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.__rv) return; el.__rv = 1;
+      const r = el.getBoundingClientRect();
+      if (r.height === 0 || r.top < vh * 0.94) return;
+      const k = el.dataset.reveal;
+      el.style.transition = 'none';
+      if (k === 'clip') el.style.clipPath = 'inset(100% 0 0 0)';
+      else if (k === 'lineX') el.style.transform = 'scaleX(0)';
+      else if (k === 'lineY') el.style.transform = 'scaleY(0)';
+      else { el.style.opacity = '0'; el.style.transform = 'translateY(' + (m ? 16 : 26) + 'px)'; }
+      el.querySelectorAll('[data-count]').forEach(c => { c.__target = +c.dataset.count; c.textContent = '0'; });
+      if (el.style.clipPath && el.parentElement) { const pe = el.parentElement; (pe.__rvKids = pe.__rvKids || []).push(el); this.io.observe(pe); } else this.io.observe(el);
+    });
+  }
+  show(el) {
+    const d = +el.dataset.delay || 0, k = el.dataset.reveal;
+    el.style.transition = k === 'clip' ? 'clip-path 1.5s ' + INOUT + ' ' + d + 'ms'
+      : (k === 'lineX' || k === 'lineY') ? 'transform 1.6s ' + INOUT + ' ' + d + 'ms'
+      : 'opacity 1.1s ' + OUT + ' ' + d + 'ms, transform 1.3s ' + OUT + ' ' + d + 'ms';
+    requestAnimationFrame(() => {
+      if (k === 'clip') el.style.clipPath = 'inset(0 0 0 0)';
+      else if (k === 'lineX' || k === 'lineY') el.style.transform = 'none';
+      else { el.style.opacity = '1'; el.style.transform = 'none'; }
+    });
+    el.querySelectorAll('[data-count]').forEach(c => {
+      const t = c.__target ?? +c.dataset.count, dec = +(c.dataset.dec || 0), t0 = performance.now() + d;
+      const run = now => { const q = Math.min(1, Math.max(0, (now - t0) / 1800)), e = 1 - Math.pow(1 - q, 4); c.textContent = (t * e).toFixed(dec); if (q < 1) requestAnimationFrame(run); };
+      requestAnimationFrame(run);
+    });
+    setTimeout(() => { el.style.transition = ''; el.style.clipPath = ''; el.style.opacity = ''; el.style.transform = ''; }, 1800 + d);
+  }
+  setMenu(open) { document.body.style.overflow = open ? 'hidden' : ''; this.setState({ menu: open }); }
+  scrollRev(dir) {
+    const el = this.revRef.current; if (!el) return;
+    const card = el.querySelector('figure'), step = card ? card.getBoundingClientRect().width + 24 : el.clientWidth * 0.8;
+    const max = el.scrollWidth - el.clientWidth; let to = el.scrollLeft + dir * step;
+    if (to > max + 4) to = 0; else if (to < -4) to = max;
+    el.scrollTo({ left: to, behavior: this.reduced ? 'auto' : 'smooth' });
+  }
+  floralFit(m, w) {
+    const hl = this.state.hl;
+    if (!m) return { flUrTop: '9%', flUrW: 'clamp(260px,27.5vw,560px)', flLTop: '15%', flLW: 'clamp(130px,13.2vw,270px)' };
+    if (!hl) return { flUrTop: '66px', flUrW: Math.round(Math.min(0.3 * w, 150)) + 'px', flLTop: '22%', flLW: Math.round(Math.min(0.13 * w, 56)) + 'px' };
+    const ur = Math.round(Math.max(64, Math.min(0.36 * w, 170, (hl.textTop - 70) / 0.85)));
+    return { flUrTop: '66px', flUrW: ur + 'px', flLTop: (hl.textTop + 4) + 'px', flLW: Math.round(Math.min(0.15 * w, 64)) + 'px' };
+  }
+  waitHero(n = 0) {
+    const sec = document.getElementById('top'), txt = sec && sec.querySelector('[data-hero-text]'), cta = sec && sec.querySelector('[data-hero-cta]');
+    if (!txt || !cta) { if (n < 80) this._heroT = setTimeout(() => this.waitHero(n + 1), 100); return; }
+    this.fitHero();
+    if (window.ResizeObserver && !this.heroRO) { this.heroRO = new ResizeObserver(() => this.fitHero()); [sec, txt, cta].forEach(el => this.heroRO.observe(el)); }
+  }
+  // Mobile/tablet: measure header, text and CTA, then size + place the panoramic stack in the band between them.
+  fitHero() {
+    const sec = document.getElementById('top'); if (!sec) return;
+    const W = window.innerWidth;
+    if (W >= BP) { if (this.state.hl) this.setState({ hl: null }); return; }
+    const cta = sec.querySelector('[data-hero-cta]'), txt = sec.querySelector('[data-hero-text]'); if (!cta || !txt) return;
+    const pr = document.createElement('div'); pr.style.cssText = 'position:fixed;top:0;left:0;width:0;height:100vh;visibility:hidden;pointer-events:none';
+    document.body.appendChild(pr); const V = pr.offsetHeight || window.innerHeight; pr.remove();
+    const H = sec.offsetHeight, top = 74, T = txt.offsetHeight, ctaTop = cta.offsetTop, g2 = W < 768 ? 22 : 32, g3 = 18;
+    const avail = ctaTop - g3 - top - T - g2;
+    let ch = Math.min((avail - 12 - 0.06 * V - 16) / 0.95, ((W < 768 ? 0.44 : 0.3) * W) / 0.75, 0.36 * window.innerHeight);
+    ch = Math.max(110, Math.round(ch)); const cw = Math.round(ch * 0.75);
+    const E = 0.95 * ch + 0.06 * V + 16, free = Math.max(0, avail - E);
+    const start = top + Math.max(12, free * 0.42), yT = start + T / 2, cy = start + T + g2 + ch / 2 - 0.015 * V + 8;
+    const hl = { off: +((cy - H / 2) / V * 100).toFixed(2), te: +((yT - cy) / V * 100).toFixed(2), card: { w: cw, h: ch }, textTop: Math.round(start) };
+    if (JSON.stringify(hl) !== JSON.stringify(this.state.hl)) this.setState({ hl });
+  }
+  heroFit(m) {
+    const vh = typeof window !== 'undefined' ? window.innerHeight : 900, short = vh < 760, tiny = vh < 620;
+    return { heroPadT: m ? (tiny ? '132px' : '150px') : 'clamp(150px,20vh,200px)', heroPadB: m ? '64px' : (short ? '96px' : 'clamp(110px,14vh,150px)'),
+      heroGap: short ? '14px' : 'clamp(18px,2.4vw,30px)', showMark: !m && !short, showCopy: !tiny, showQuote: !m && !short,
+      ctaFlex: m ? '1 1 100%' : '0 0 auto', ctaH1: tiny ? '48px' : '56px' };
+  }
+  pano(m) {
+    const vh = typeof window !== 'undefined' ? window.innerHeight : 900, scroll = (this.props.spreadTrigger ?? 'On load') === 'On scroll';
+    this.spacerPx = scroll ? vh * 2 : 0;
+    const hl = this.state.hl;
+    if (!this._pano) this._pano = PANO.map(([f, alt]) => ({ src: 'assets/hero/' + f + '.webp', alt }));
+    return { panoImages: this._pano, panoMode: scroll ? 'scroll' : 'load', panoDist: this.spacerPx, panoSpacer: this.spacerPx + 'px',
+      panoOffset: m && hl ? hl.off : (m ? 8 : 7), panoTextEnd: m && hl ? hl.te : (m ? -27 : -24), panoCard: m && hl ? hl.card : null, panoH1: m ? 'clamp(40px,11vw,64px)' : 'clamp(52px,5.5vw,104px)', ctaMax: m ? '100%' : '560px' };
+  }
+  streamImages() {
+    if (!this._si) this._si = STREAM.map(id => ({ src: SPX(id), alt: '' }));
+    return this._si;
+  }
+  rails(m) {
+    const n = m ? 7 : 9, dur = (this.props.streamSpeed ?? 22) * (m ? 1.15 : 1);
+    const mk = (side, off) => Array.from({ length: n }, (_, i) => {
+      const id = STREAM[(i * 2 + off) % STREAM.length];
+      return { src: SPX(id), loading: i < 4 ? 'eager' : 'lazy', anim: (side === 'L' ? 'smStreamL ' : 'smStreamR ') + dur.toFixed(1) + 's linear ' + (-((i + (off ? 0.5 : 0)) / n) * dur).toFixed(2) + 's infinite' };
+    });
+    if (this._rk !== n + ':' + dur) { this._rk = n + ':' + dur; this._rails = { railL: mk('L', 0), railR: mk('R', 1) }; }
+    return this._rails;
+  }
+  igDualRows() {
+    if (this._igRows) return this._igRows;
+    const row1 = [
+      { src: 'assets/ig/colour.webp', title: 'Vibrant Balayage', tag: 'Hair Colour', alt: 'Long curls in violet, copper and gold colour' },
+      { src: 'assets/insta-nails.webp', title: 'Hand-Painted Gel Art', tag: 'Nail Studio', alt: 'Hand-painted almond nail art' },
+      { src: 'assets/ig/bridal.webp', title: 'Bridal Radiance', tag: 'Bridal Glam', alt: 'Bridal makeup and soft waves with gold hair accessory' },
+      { src: 'assets/hero/curls.webp', title: 'Caramel Dimensional Curls', tag: 'Styling', alt: 'Caramel balayage waves' },
+      { src: 'assets/ig/beauty.webp', title: 'Lash Extensions', tag: 'Lash & Brow', alt: 'Close-up profile of lash extensions' },
+      { src: 'assets/hero/updo.webp', title: 'Editorial Bridal Updo', tag: 'Hair Studio', alt: 'Bridal updo with pearl pins' },
+      { src: 'assets/moroccan-bath.webp', title: 'The Moroccan Bath', tag: 'Private Ritual', alt: 'Warm low light Moroccan bath' },
+      { src: 'assets/hero/storefront.webp', title: 'F-8 Salon Exterior', tag: 'The Space', alt: 'Studio M storefront, F-8 Islamabad' },
+      { src: 'assets/lookbook/look-06-600.webp', title: 'Soft Smokey Evening Glam', tag: 'Makeup', alt: 'Evening glam with soft smoky eyes and brunette waves' },
+      { src: 'assets/hero/henna.webp', title: 'Traditional Mehndi Art', tag: 'Henna & Nails', alt: 'Mehndi and ombré nails' }
+    ];
+    const row2 = [
+      { src: 'assets/ig/hair.webp', title: 'Caramel Highlights Cut', tag: 'Haircut & Finish', alt: 'Shoulder-length cut with soft caramel highlights' },
+      { src: 'assets/hero/bridal.webp', title: 'Couture Bridal Glam', tag: 'Bridal Suite', alt: 'Bridal hair and makeup' },
+      { src: 'assets/insta-space.webp', title: 'The Salon Sanctuary', tag: 'Atmosphere', alt: 'The Studio M salon space' },
+      { src: 'assets/hero/nails.webp', title: 'Burgundy Gloss Manicure', tag: 'Nail Art', alt: 'Burgundy nail art' },
+      { src: 'assets/lookbook/look-04-600.webp', title: 'Voluminous Blow-Dry', tag: 'Hair Styling', alt: 'Soft voluminous blow-dry with glowing makeup' },
+      { src: 'assets/hero/balayage.webp', title: 'Copper & Violet Waves', tag: 'Colour Studio', alt: 'Curly colour, violet to copper' },
+      { src: 'assets/lookbook/look-09-600.webp', title: 'Glass Skin Radiance', tag: 'Skin Glow', alt: 'Sleek centre-part hair and glowing makeup' },
+      { src: 'assets/hero/spa.webp', title: 'Botanical Hair Spa', tag: 'Wellness', alt: 'Hair spa treatment' },
+      { src: 'assets/lookbook/look-02-600.webp', title: 'Loose Bridal Braid', tag: 'Bridal Hair', alt: 'Loose bridal braid with pearl accents' },
+      { src: 'assets/about-interior.webp', title: 'Warm Contemporary Interior', tag: 'F-8 Islamabad', alt: 'Studio interior' }
+    ];
+    this._igRows = { row1, row2 };
+    return this._igRows;
+  }
+  setCursor() {}
+
+  renderVals() {
+    const p = this.props, { w, scrolled, past, menu, svc, look, cursor, dragging } = this.state;
+    const isMobile = w < BP, sticky = p.stickyCta ?? true;
+    const hl = p.heroHeadline ?? 'The art of beauty.';
+    return {
+      isMobile, isDesktop: !isMobile,
+      hA: hl === 'The art of beauty.', hB: hl === 'Where beauty becomes an experience.', hC: hl === 'Beauty in its element.',
+      h1Size: isMobile ? 'clamp(46px,min(18vw,10.5svh),110px)' : 'clamp(64px,min(10.5vw,15svh),190px)',
+      h1SizeSm: isMobile ? 'clamp(54px,15vw,96px)' : 'clamp(90px,10vw,190px)',
+      h1Indent: isMobile ? '.6em' : '1.4em',
+      heroH: isMobile ? '92svh' : '100svh', ctaFlex: isMobile ? '1 1 100%' : '0 0 auto',
+      bookingUrl: p.bookingUrl || 'StudioM-Booking.dc.html', mapsUrl: MAPS,
+      headerBg: scrolled && !menu ? 'rgba(248,243,236,.86)' : 'rgba(248,243,236,0)',
+      headerBlur: scrolled && !menu ? 'saturate(130%) blur(18px)' : 'none',
+      headerLine: scrolled && !menu ? 'rgba(69,65,67,.08)' : 'rgba(69,65,67,0)',
+      headerPadY: scrolled ? '12px' : (isMobile ? '18px' : '28px'),
+      toggleMenu: () => this.setMenu(!menu), closeMenu: () => this.setMenu(false),
+      menuExpanded: String(menu), menuHidden: String(!menu), menuLabel: menu ? 'Close menu' : 'Open menu',
+      menuClip: menu ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)', menuVis: menu ? 'visible' : 'hidden',
+      menuOp: menu ? 1 : 0, menuTf: menu ? 'none' : 'translateY(36px)',
+      bar1: menu ? 'translateY(4px) rotate(45deg)' : 'none', bar2: menu ? 'translateY(-4px) rotate(-45deg)' : 'none',
+      cursorRef: this.cursorRef, previewRef: this.previewRef,
+      cursorOp: cursor && !isMobile ? 1 : 0, cursorLabel: cursor, cursorScale: cursor ? 'scale(1)' : 'scale(.4)',
+      ...this.pano(isMobile),
+      ...this.heroFit(isMobile),
+      h1ShiftA: isMobile ? '-.3em' : '-.9em', h1ShiftB: isMobile ? '.4em' : '1em', ctaW: isMobile ? '100%' : 'auto',
+      ruleDir: isMobile ? 'row' : 'column', labelMode: isMobile ? 'horizontal-tb' : 'vertical-rl', labelRot: isMobile ? 'none' : 'rotate(180deg)',
+      teaser: TEASER.map((s, i) => ({ ...s, num: '0' + (i + 1), img: 'v3-svc-' + s.key, src: PX(s.px).replace('w=1400', 'w=800'), ph: s.title + ' · 3:4 (temporary stock image)',
+        mt: w >= 1080 && i % 2 ? 'clamp(32px,4vw,64px)' : '0px', delay: w >= 1080 ? i * 90 : 0 })),
+      svcItemW: w >= 1080 ? 'calc((100% - 4 * clamp(14px,1.6vw,28px)) / 5)' : 'min(68vw,300px)',
+      sigVideoRef: this.sigVideo || (this.sigVideo = React.createRef()),
+      toggleSigVideo: () => { const v = this.sigVideo && this.sigVideo.current; if (!v) return; if (v.paused) { this.sigUserPaused = false; if (this.sigPlay) this.sigPlay(); else v.play().catch(() => {}); this.setState({ sigPaused: false }); } else { this.sigUserPaused = true; v.pause(); this.setState({ sigPaused: true }); } },
+      sigVideoText: this.state.sigPaused ? '▶ PLAY' : 'II PAUSE', sigVideoLabel: this.state.sigPaused ? 'Play video' : 'Pause video',
+      sigMinH: isMobile ? '0px' : 'min(92svh,880px)', sigImgH: isMobile ? '120vw' : '640px',
+      quoteH: isMobile ? '64svh' : '80svh',
+      lookItems: LOOKS, lookStagger: 0.08,
+      renderLook: this.renderLook || (this.renderLook = (l, i) => React.createElement('figure', {
+        style: { margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' },
+        onMouseEnter: () => this.setCursor('VIEW'), onMouseLeave: () => this.setCursor('') },
+        React.createElement('div', { style: { width: '100%', aspectRatio: l.ar, overflow: 'hidden', background: '#E7D3CC' } },
+          React.createElement('img', { src: l.src, srcSet: l.srcSet, sizes: LOOK_SIZES, alt: l.alt, loading: i < 3 ? 'eager' : 'lazy', decoding: 'async',
+            draggable: false, style: { display: 'block', width: '100%', height: '100%', objectFit: 'cover' } })))),
+      ig: IG.map((id, i) => ({ id: 'v3-ig-' + (i + 1), src: PX(id), mt: isMobile ? (i % 3 === 1 ? '28px' : '0px') : IG_MT[i], delay: (i % 3) * 110 })),
+      igRow1: this.igDualRows().row1,
+      igRow2: this.igDualRows().row2,
+      igSpeed: this.reduced ? 0 : (isMobile ? 32 : 38),
+      spCols: isMobile ? 'repeat(2,minmax(0,1fr))' : 'repeat(7,auto)', spDia: isMobile ? 'none' : 'block',
+      ...this.floralFit(isMobile, w),
+      descMargin: isMobile ? '0 auto' : '0', ctaAlign: isMobile ? 'center' : 'left',
+      heroDescDisp: isMobile && typeof window !== 'undefined' && window.innerHeight < 620 ? 'none' : 'block',
+      dragEnterIg: () => this.setCursor('DRAG'), dragLeaveIg: () => this.setCursor(''),
+      reviews: REVIEWS, revRef: this.revRef, revCardW: isMobile ? '86%' : 'min(720px,56%)',
+      snapType: dragging ? 'none' : 'x mandatory', dragCursor: isMobile ? 'auto' : (dragging ? 'grabbing' : 'grab'),
+      prevRev: () => this.scrollRev(-1), nextRev: () => this.scrollRev(1),
+      dragEnter: () => this.setCursor('DRAG'), dragLeave: () => { this.setCursor(''); if (this.drag) { this.drag = null; this.setState({ dragging: false }); } },
+      dragStart: e => { if (e.pointerType !== 'mouse') return; const el = this.revRef.current; this.drag = { x: e.clientX, s: el.scrollLeft }; el.style.scrollBehavior = 'auto'; this.setState({ dragging: true }); },
+      dragMove: e => { if (!this.drag) return; this.revRef.current.scrollLeft = this.drag.s - (e.clientX - this.drag.x); },
+      dragEnd: () => { if (!this.drag) return; this.drag = null; const el = this.revRef.current; el.style.scrollBehavior = ''; this.setState({ dragging: false }); },
+      extRatio: isMobile ? '4/5' : '21/9', ctaH: isMobile ? '80svh' : '86svh',
+      stickyShow: isMobile && sticky, stickyTf: past && !menu ? 'translateY(0)' : 'translateY(110%)',
+      footerPadBottom: isMobile && sticky ? '116px' : '44px'
+    };
+  }
+}
+
+</script>
+</body>
+</html>

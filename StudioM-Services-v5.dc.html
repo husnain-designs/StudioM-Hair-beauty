@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Services — Studio M · Hair | Nail | Beauty · F-8, Islamabad</title>
+<meta name="description" content="Hair, skin, nails, beauty and wellness services at Studio M, F-8/1 Islamabad. Haircuts, colour, facials, manicures, makeup and Moroccan bath. Prices on request.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:130px;-webkit-text-size-adjust:100%}
+body{margin:0;background:#F8F3EC;color:#454143;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#454143;text-decoration:none}
+a:hover{color:#454143}
+button{font-family:inherit;color:inherit}
+::selection{background:#EFC6C7;color:#454143}
+:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</helmet>
+
+<a href="#main" style="position:absolute;left:-9999px;top:8px;z-index:200;background:#454143;color:#F8F3EC;padding:12px 18px;font-size:12px" style-focus="left:8px">Skip to content</a>
+
+<header data-intro="0" data-intro-kind="down" style="position:fixed;top:0;left:0;right:0;z-index:90;background:{{ headerBg }};backdrop-filter:{{ headerBlur }};-webkit-backdrop-filter:{{ headerBlur }};border-bottom:1px solid {{ headerLine }};transition:background .8s cubic-bezier(.22,.61,.36,1),border-color .8s">
+  <div style="max-width:1680px;margin:0 auto;padding:{{ headerPadY }} clamp(20px,3.6vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .8s cubic-bezier(.22,.61,.36,1)">
+    <a href="StudioM-Home-v5.dc.html" aria-label="Studio M — home" style="display:flex;flex-direction:column;gap:5px;line-height:1">
+      <img src="assets/studio-m-logo.svg" alt="" style="display:block;flex-shrink:0;width:156.8px;height:36.5px">
+    </a>
+    <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Primary" style="display:flex;align-items:center;gap:clamp(18px,2.2vw,34px)">
+        <a href="StudioM-Home-v5.dc.html" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">HOME</a>
+        <a href="#top" aria-current="page" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/100% 1px">SERVICES</a>
+        <a href="StudioM-Home-v5.dc.html#about" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">ABOUT</a>
+        <a href="StudioM-Home-v5.dc.html#lookbook" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">LOOKBOOK</a>
+        <a href="StudioM-Home-v5.dc.html#reviews" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">REVIEWS</a>
+        <a href="StudioM-Home-v5.dc.html#contact" style="font-size:10.5px;font-weight:500;letter-spacing:.22em;white-space:nowrap;padding:6px 0;background:linear-gradient(#B98287,#B98287) no-repeat left bottom/0% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:100% 1px">CONTACT</a>
+        <a href="{{ bookingUrl }}" style="display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 20px;margin-left:6px;white-space:nowrap;border:1px solid #B98287;font-size:10.5px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#EFC6C7,#EFC6C7) no-repeat left/0% 100%;transition:background-size .7s cubic-bezier(.65,0,.35,1),color .5s,gap .5s" style-hover="background-size:100% 100%;color:#454143;gap:18px">BOOK APPOINTMENT <span aria-hidden="true">→</span></a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isNarrow }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-controls="mobile-menu" aria-label="{{ menuLabel }}" style="width:48px;height:48px;margin-right:-12px;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;cursor:pointer">
+        <span style="display:block;width:28px;height:1px;background:#454143;transform:{{ bar1 }};transition:transform .7s cubic-bezier(.65,0,.35,1)"></span>
+        <span style="display:block;width:28px;height:1px;background:#454143;transform:{{ bar2 }};transition:transform .7s cubic-bezier(.65,0,.35,1)"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ isNarrow }}" hint-placeholder-val="{{ false }}">
+  <div id="mobile-menu" aria-hidden="{{ menuHidden }}" style="position:fixed;inset:0;z-index:85;background:#F8F3EC;clip-path:{{ menuClip }};visibility:{{ menuVis }};transition:clip-path 1s cubic-bezier(.65,0,.35,1),visibility 1s;display:flex;flex-direction:column;justify-content:space-between;padding:112px 24px calc(32px + env(safe-area-inset-bottom));overflow-y:auto">
+    <nav aria-label="Mobile" style="display:flex;flex-direction:column">
+      <a href="StudioM-Home-v5.dc.html" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .3s,transform 1s .3s cubic-bezier(.16,1,.3,1)">Home</a>
+      <a href="#top" onClick="{{ closeMenu }}" aria-current="page" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .36s,transform 1s .36s cubic-bezier(.16,1,.3,1)"><em>Services</em></a>
+      <a href="StudioM-Home-v5.dc.html#lookbook" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .42s,transform 1s .42s cubic-bezier(.16,1,.3,1)">Lookbook</a>
+      <a href="StudioM-Home-v5.dc.html#contact" style="font-family:'Cormorant Garamond',serif;font-size:clamp(42px,12vw,60px);font-weight:300;line-height:1;padding:14px 0;border-bottom:1px solid rgba(69,65,67,.12);opacity:{{ menuOp }};transform:{{ menuTf }};transition:opacity .7s .48s,transform 1s .48s cubic-bezier(.16,1,.3,1)">Visit</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:22px;padding-top:32px;opacity:{{ menuOp }};transition:opacity .8s .65s">
+      <a href="{{ bookingUrl }}" style="display:flex;align-items:center;justify-content:center;gap:14px;min-height:56px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;font-size:12px;line-height:1.7;color:#5E5557"><span>F-8/1, Islamabad<br>Open 7 days · 11:00–7:30</span><a href="tel:+92518357921">051 835 7921</a></div>
+    </div>
+  </div>
+</sc-if>
+
+<main id="main">
+
+<section id="top" data-screen-label="Services hero" style="position:relative;isolation:isolate;overflow:hidden;background:#F3D1D1;min-height:{{ svHeroMinH }};display:flex;align-items:center">
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse 58% 62% at 66% 54%,rgba(248,243,236,.9) 0%,rgba(246,217,217,.45) 55%,rgba(243,209,209,0) 80%)"></div>
+  <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:120px;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(248,243,236,0) 0%,rgba(248,243,236,.75) 100%)"></div>
+  <div style="width:100%;max-width:1680px;margin:0 auto;padding:{{ svHeroPad }};display:flex;flex-direction:{{ svDir }};flex-wrap:{{ svHeroWrap }};align-items:center;gap:{{ svGap }}">
+    <div style="flex:1 1 320px;min-width:0;display:{{ svTextDisp }};flex-direction:column;gap:clamp(20px,2.2vw,30px)">
+      <p data-intro="2" data-intro-kind="fade" style="order:1;margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.34em;color:#7A4A50"><span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span>STUDIO M · F-8 ISLAMABAD</p>
+      <h1 style="order:2;margin:0;text-align:{{ svAlign }};font-family:'Cormorant Garamond',serif;font-weight:300;font-size:{{ svH1 }};line-height:.9;letter-spacing:-.02em;color:#454143">
+        <span style="display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em"><span data-intro="2" data-intro-kind="line" style="display:block">The Art of</span></span>
+        <span style="display:block;overflow:hidden;padding:0 .12em .1em 0;margin:0 -.12em -.1em 0"><span data-intro="3" data-intro-kind="line" style="display:block"><em style="color:#9E6A70">Beauty</em></span></span>
+      </h1>
+      <span data-intro="3" data-intro-kind="fade" aria-hidden="true" style="order:3;display:block;flex:none;width:56px;height:1px;background:#A8AD9B"></span>
+      <div data-intro="4" style="order:5;max-width:440px;text-align:{{ svAlign }};display:flex;flex-direction:column;gap:{{ svDescGap }}">
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,2.2vw,34px);line-height:1.18;color:#454143;text-wrap:pretty">A considered collection of beauty experiences.</p>
+        <p style="margin:0;font-size:15px;line-height:1.75;color:#5E5557;text-wrap:pretty">Hair, skin, nails, beauty and wellness, under one roof in F-8/1, Islamabad. Prices on request.</p>
+      </div>
+      <div data-intro="5" style="order:6;align-self:{{ svStretch }};display:flex;flex-wrap:wrap;align-items:center;justify-content:{{ svJustify }};gap:12px 28px;padding-top:4px">
+        <a href="#hair" onClick="{{ exploreServices }}" style="flex:{{ svCtaFlex }};display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid #454143;background:rgba(248,243,236,.55);color:#454143;font-size:11px;font-weight:500;letter-spacing:.22em;transition:background .6s cubic-bezier(.22,.61,.36,1),border-color .6s,gap .6s cubic-bezier(.22,.61,.36,1)" style-hover="background:#EFC6C7;border-color:#B98287;gap:22px">EXPLORE OUR SERVICES <span aria-hidden="true">→</span></a>
+        <a href="tel:+92518357921" style="display:inline-flex;align-items:center;min-height:44px;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left bottom/100% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:30% 1px">051 835 7921</a>
+      </div>
+    </div>
+    <div style="order:4;flex:1.35 1 380px;min-width:0;align-self:{{ svStretch }};margin:{{ svClusterM }};display:flex;justify-content:center">
+      <div style="position:relative;width:{{ svClusterW }};aspect-ratio:{{ svClusterAR }}">
+        <div data-intro="5" data-intro-kind="fade" aria-hidden="true" style="position:absolute;right:-9%;top:-7%;width:50%;z-index:0;pointer-events:none"><img src="assets/florals/hero-ur.webp" alt="" style="display:block;width:100%;height:auto"></div>
+        <div data-intro="6" data-intro-kind="fade" aria-hidden="true" style="position:absolute;left:-4%;bottom:-6%;width:22%;z-index:0;pointer-events:none;transform:scaleY(-1)"><img src="assets/florals/hero-l.webp" alt="" style="display:block;width:100%;height:auto"></div>
+        <div data-intro="6" data-intro-kind="fade" aria-hidden="true" style="position:absolute;right:-2%;bottom:-4%;width:26%;z-index:0;pointer-events:none"><img src="assets/florals/hero-lr.webp" alt="" style="display:block;width:100%;height:auto"></div>
+        <div data-intro="7" data-intro-kind="fade" aria-hidden="true" style="position:absolute;left:6%;top:8%;width:7%;z-index:0;pointer-events:none"><img data-petal="" src="assets/florals/hero-petal-a.webp" alt="" style="display:block;width:100%;height:auto"></div>
+        <div data-intro="1" data-intro-kind="aperture" style="position:absolute;left:28%;top:0;width:46%;height:94%;z-index:2;padding:clamp(6px,.7vw,10px);background:#F8F3EC;border-radius:999px 999px 6px 6px;box-shadow:0 34px 70px -24px rgba(110,80,84,.3)">
+          <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:999px 999px 2px 2px;background:#E9D6CF">
+            <div data-intro="1" data-intro-kind="zoom" style="position:absolute;inset:0">
+              <image-slot id="v3sv-hero" shape="rect" src="https://images.pexels.com/photos/3993312/pexels-photo-3993312.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" placeholder="Services hero — temporary stock image" loading="eager" style="width:100%;height:100%"></image-slot>
+            </div>
+          </div>
+        </div>
+        <div data-parallax="0.05" style="position:absolute;left:0;top:{{ svPaTop }};width:{{ svPW }};z-index:3">
+          <div data-intro="4" style="transform:rotate(-4deg);padding:clamp(5px,.6vw,8px) clamp(5px,.6vw,8px) clamp(16px,1.6vw,22px);background:#F8F3EC;border-radius:4px;box-shadow:0 26px 50px -20px rgba(110,80,84,.28)">
+            <div style="position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:2px;background:#E9D6CF">
+              <image-slot id="v3sv-hero-a" shape="rect" src="assets/hero/nails.webp" placeholder="Nails" loading="eager" style="width:100%;height:100%"></image-slot>
+            </div>
+          </div>
+        </div>
+        <div data-parallax="0.09" style="position:absolute;right:{{ svPbR }};bottom:4%;width:{{ svPWb }};z-index:3">
+          <div data-intro="5" style="transform:rotate(3deg);padding:clamp(5px,.6vw,8px) clamp(5px,.6vw,8px) clamp(16px,1.6vw,22px);background:#F8F3EC;border-radius:4px;box-shadow:0 26px 50px -20px rgba(110,80,84,.28)">
+            <div style="position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:2px;background:#E9D6CF">
+              <image-slot id="v3sv-hero-b" shape="rect" src="assets/hero/curls.webp" placeholder="Hair colour" loading="eager" style="width:100%;height:100%"></image-slot>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="position:sticky;top:{{ barTop }};z-index:40;background:{{ barBg }};backdrop-filter:{{ barBlur }};-webkit-backdrop-filter:{{ barBlur }};border-top:1px solid rgba(69,65,67,.08);border-bottom:1px solid rgba(69,65,67,.08);transition:top .8s cubic-bezier(.22,.61,.36,1)">
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1680px;margin:0 auto;padding:0 clamp(20px,3.6vw,56px);display:flex;align-items:center;gap:24px">
+      <div style="flex:1;display:flex;justify-content:space-between;gap:24px">
+        <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+          <a href="{{ c.hash }}" style="display:flex;align-items:center;min-height:52px;font-size:10.5px;font-weight:500;letter-spacing:.22em;opacity:{{ c.barOp }};background:linear-gradient(#B98287,#B98287) no-repeat left bottom/{{ c.barLine }} 1px;transition:opacity .5s,background-size .8s cubic-bezier(.65,0,.35,1)" style-hover="opacity:1">{{ c.titleU }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;gap:8px;overflow-x:auto;padding:8px 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <a href="{{ c.hash }}" onClick="{{ c.jump }}" style="flex:0 0 auto;display:flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid {{ c.chipLine }};background:{{ c.chipBg }};color:{{ c.chipFg }};font-size:10.5px;font-weight:500;letter-spacing:.2em;transition:background .5s,color .5s,border-color .5s">{{ c.titleU }}</a>
+      </sc-for>
+    </div>
+  </sc-if>
+</div>
+
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+  <section id="hair" data-cat="0" data-screen-label="Hair" style="position:relative;isolation:isolate;overflow:hidden;background:#F2E9DE">
+    <div data-reveal="up" aria-hidden="true" style="position:absolute;right:clamp(16px,3vw,56px);top:clamp(24px,3vw,48px);z-index:-1;width:clamp(110px,11vw,190px);pointer-events:none;opacity:.85"><img src="assets/florals/sprig.svg" alt="" style="display:block;width:100%;height:auto"></div>
+    <div style="max-width:1680px;margin:0 auto;padding:clamp(80px,8.4vw,136px) clamp(20px,3.6vw,56px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(48px,6vw,120px);align-items:center">
+      <div style="position:relative;padding:0 clamp(28px,4vw,72px) clamp(44px,5vw,88px) 0">
+        <div data-reveal="clip" style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#E3D2C8">
+          <div data-parallax="0.05" style="position:absolute;left:0;right:0;top:-6%;bottom:-6%">
+            <sc-for list="{{ hair.imgs }}" as="im" hint-placeholder-count="1">
+              <div style="position:absolute;inset:0;opacity:{{ im.op }};transform:{{ im.scale }};transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1.8s cubic-bezier(.16,1,.3,1)">
+                <image-slot id="{{ im.id }}" shape="rect" data-src="{{ im.src }}" placeholder="{{ im.ph }}" style="width:100%;height:100%"></image-slot>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div data-reveal="clip" data-delay="220" style="position:absolute;right:0;bottom:0;width:40%;aspect-ratio:3/4;overflow:hidden;background:#E3D2C8;box-shadow:0 0 0 clamp(6px,.7vw,12px) #F2E9DE">
+          <div style="position:absolute;inset:0;transition:transform 1.6s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.05)">
+            <image-slot id="v3sv-hair-inset" shape="rect" src="https://images.pexels.com/photos/3065171/pexels-photo-3065171.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" placeholder="Hair detail — temporary stock image" style="width:100%;height:100%"></image-slot>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:clamp(26px,2.8vw,40px)">
+        <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;color:#7A4A50"><span style="width:28px;height:1px;background:#B98287"></span>CUT · COLOUR · CARE</p>
+        <h2 data-reveal="up" data-delay="60" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(96px,10vw,188px);line-height:.78;letter-spacing:-.03em">Hair</h2>
+        <p data-reveal="up" data-delay="120" style="margin:0;max-width:440px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,2vw,30px);line-height:1.25;color:#5E5557">Cut, colour and care, shaped around you.</p>
+        <ul data-reveal="up" data-delay="180" onMouseLeave="{{ hair.leave }}" style="margin:0;padding:0;list-style:none;border-bottom:1px solid rgba(185,130,135,.45)">
+          <sc-for list="{{ hair.items }}" as="it" hint-placeholder-count="4">
+            <li style="border-top:1px solid rgba(185,130,135,.45)">
+              <div onMouseEnter="{{ it.enter }}" onFocus="{{ it.enter }}" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) 20px;gap:24px;align-items:baseline;padding:24px 0">
+                <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,2.3vw,38px);font-weight:300;line-height:1.05;font-style:{{ it.fs }};transform:{{ it.shift }};transition:transform .8s cubic-bezier(.16,1,.3,1)">{{ it.name }}</span>
+                <span style="font-size:14px;line-height:1.7;color:#5E5557;opacity:{{ it.descOp }};transition:opacity .6s">{{ it.desc }}</span>
+                <span aria-hidden="true" style="font-size:14px;opacity:{{ it.arrowOp }};transform:{{ it.arrow }};transition:opacity .5s,transform .8s cubic-bezier(.16,1,.3,1)">→</span>
+                <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#454143;transform-origin:left;transform:{{ it.line }};transition:transform .9s cubic-bezier(.65,0,.35,1)"></span>
+              </div>
+            </li>
+          </sc-for>
+        </ul>
+        <div data-reveal="up" data-delay="240">
+          <a href="{{ hair.book }}" style="display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid #454143;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left/0% 100%;transition:background-size .8s cubic-bezier(.65,0,.35,1),color .5s,gap .6s" style-hover="background-size:100% 100%;color:#F8F3EC;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skin" data-cat="1" data-screen-label="Skin" style="position:relative;overflow:hidden;background:#EFC6C7">
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:stretch">
+      <div style="padding:clamp(80px,8.4vw,136px) clamp(40px,5vw,104px) clamp(80px,8.4vw,136px) max(clamp(20px,3.6vw,56px),calc((100vw - 1680px) / 2 + 56px));display:flex;flex-direction:column;justify-content:center;gap:clamp(26px,2.8vw,40px)">
+        <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;color:#7A4A50"><span style="width:28px;height:1px;background:#454143"></span>FACIALS · DERMAPLANING · TREATMENTS</p>
+        <h2 data-reveal="up" data-delay="60" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(88px,9vw,170px);line-height:.8;letter-spacing:.04em">SKIN</h2>
+        <p data-reveal="up" data-delay="120" style="margin:0;max-width:420px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,2vw,30px);line-height:1.25;color:#454143">Facials and treatments for clear, rested skin.</p>
+        <ul data-reveal="up" data-delay="180" onMouseLeave="{{ skin.leave }}" style="margin:0;padding:0;list-style:none;border-bottom:1px solid rgba(69,65,67,.22)">
+          <sc-for list="{{ skin.items }}" as="it" hint-placeholder-count="3">
+            <li style="border-top:1px solid rgba(69,65,67,.22)">
+              <div onMouseEnter="{{ it.enter }}" onFocus="{{ it.enter }}" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) 20px;gap:24px;align-items:baseline;padding:24px 0">
+                <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,2.3vw,38px);font-weight:300;line-height:1.05;font-style:{{ it.fs }};transform:{{ it.shift }};transition:transform .8s cubic-bezier(.16,1,.3,1)">{{ it.name }}</span>
+                <span style="font-size:14px;line-height:1.7;color:#514A4C;opacity:{{ it.descOp }};transition:opacity .6s">{{ it.desc }}</span>
+                <span aria-hidden="true" style="font-size:14px;opacity:{{ it.arrowOp }};transform:{{ it.arrow }};transition:opacity .5s,transform .8s cubic-bezier(.16,1,.3,1)">→</span>
+                <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#454143;transform-origin:left;transform:{{ it.line }};transition:transform .9s cubic-bezier(.65,0,.35,1)"></span>
+              </div>
+            </li>
+          </sc-for>
+        </ul>
+        <div data-reveal="up" data-delay="240" style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 32px">
+          <a href="{{ skin.book }}" style="display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid #454143;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left/0% 100%;transition:background-size .8s cubic-bezier(.65,0,.35,1),color .5s,gap .6s" style-hover="background-size:100% 100%;color:#F8F3EC;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+          <a href="#signature" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left bottom/100% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:30% 1px">THE SIGNATURE FACIAL ↓</a>
+        </div>
+      </div>
+      <div data-reveal="clip" style="position:relative;min-height:clamp(600px,54vw,900px);overflow:hidden;background:#E2B9BA">
+        <div data-parallax="0.06" style="position:absolute;left:0;right:0;top:-6%;bottom:-6%">
+          <sc-for list="{{ skin.imgs }}" as="im" hint-placeholder-count="1">
+            <div style="position:absolute;inset:0;opacity:{{ im.op }};transform:{{ im.scale }};transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1.8s cubic-bezier(.16,1,.3,1)">
+              <image-slot id="{{ im.id }}" shape="rect" data-src="{{ im.src }}" placeholder="{{ im.ph }}" style="width:100%;height:100%"></image-slot>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <sc-for list="{{ mobA }}" as="c" hint-placeholder-count="2">
+    <section id="{{ c.key }}" data-cat="{{ c.idx }}" data-screen-label="{{ c.title }}" style="background:{{ c.bg }};border-top:1px solid rgba(69,65,67,.1)">
+      <h2 style="margin:0">
+        <button type="button" onClick="{{ c.toggle }}" aria-expanded="{{ c.expanded }}" aria-controls="{{ c.panelId }}" style="width:100%;display:grid;grid-template-columns:minmax(0,1fr) 44px;align-items:center;gap:16px;min-height:104px;padding:26px 20px;background:none;border:0;text-align:left;cursor:pointer">
+          <span style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(46px,13vw,64px);font-weight:300;line-height:.88;letter-spacing:-.02em;font-style:{{ c.titleFs }}">{{ c.title }}</span><span style="font-family:Manrope,sans-serif;font-size:12.5px;font-weight:400;line-height:1.5;letter-spacing:0;color:{{ c.soft }}">{{ c.summary }}</span></span>
+          <span aria-hidden="true" style="position:relative;width:44px;height:44px;display:block;transform:{{ c.sign }};transition:transform .22s cubic-bezier(.4,0,.2,1)"><span style="position:absolute;left:12px;right:12px;top:21.5px;height:1px;background:#454143"></span><span style="position:absolute;top:12px;bottom:12px;left:21.5px;width:1px;background:#454143"></span></span>
+        </button>
+      </h2>
+      <div id="{{ c.panelId }}" role="region" aria-label="{{ c.title }}" style="display:grid;grid-template-rows:{{ c.rows }};transition:grid-template-rows .22s cubic-bezier(.4,0,.2,1)">
+        <div style="overflow:hidden;min-height:0">
+          <div style="padding:0 20px 40px;display:flex;flex-direction:column;gap:24px;opacity:{{ c.innerOp }};transform:{{ c.innerTf }};transition:opacity .2s,transform .22s cubic-bezier(.4,0,.2,1)">
+            <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#E3D2C8">
+              <image-slot id="{{ c.img }}" shape="rect" data-src="{{ c.src }}" placeholder="{{ c.ph }}" style="width:100%;height:100%"></image-slot>
+            </div>
+            <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:24px;line-height:1.25">{{ c.intro }}</p>
+            <ul style="margin:0;padding:0;list-style:none;border-bottom:1px solid {{ c.rule }}">
+              <sc-for list="{{ c.items }}" as="it" hint-placeholder-count="3">
+                <li style="display:flex;flex-direction:column;gap:6px;padding:18px 0;border-top:1px solid {{ c.rule }}"><span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;line-height:1.1">{{ it.name }}</span><span style="font-size:14px;line-height:1.65;color:{{ c.soft }}">{{ it.desc }}</span></li>
+              </sc-for>
+            </ul>
+            <a href="{{ c.book }}" style="display:flex;align-items:center;justify-content:center;gap:14px;min-height:54px;border:1px solid #454143;font-size:11px;font-weight:500;letter-spacing:.22em">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </sc-for>
+</sc-if>
+
+<section id="signature" data-screen-label="Signature facial" style="position:relative;isolation:isolate;overflow:hidden;background:#F8F3EC">
+  <div data-reveal="up" aria-hidden="true" style="position:absolute;left:-10px;bottom:-24px;z-index:-1;width:clamp(130px,16vw,280px);pointer-events:none;opacity:.9"><img src="assets/florals/corner-l.svg" alt="" style="display:block;width:100%;height:auto"></div>
+  <div data-reveal="up" data-delay="160" aria-hidden="true" style="position:absolute;right:-10px;top:-12px;z-index:-1;width:clamp(120px,14vw,250px);pointer-events:none;opacity:.9"><img src="assets/florals/corner-r.svg" alt="" style="display:block;width:100%;height:auto"></div>
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(80px,8.4vw,136px) clamp(20px,3.6vw,56px);display:grid;grid-template-columns:{{ sigCols }};gap:clamp(36px,4.4vw,80px);align-items:end">
+    <div style="display:flex;flex-direction:column;gap:clamp(24px,2.6vw,36px);align-self:start">
+      <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;color:#7A4A50"><span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span>STUDIO M SIGNATURE</p>
+      <h2 data-reveal="up" data-delay="60" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,6vw,116px);line-height:.88;letter-spacing:-.02em">Korean<br>Glass Skin<br><em style="color:#865258">Facial.</em></h2>
+      <p data-reveal="up" data-delay="120" style="margin:0;max-width:380px;font-size:16px;line-height:1.8;color:#5E5557;text-wrap:pretty">A hydration-focused facial built around premium Korean skincare, finished with LED light therapy.</p>
+    </div>
+    <figure data-reveal="clip" data-delay="100" style="margin:0;position:relative;aspect-ratio:3/4;overflow:hidden;background:#E9D6CF">
+      <div data-parallax="0.06" style="position:absolute;left:0;right:0;top:-6%;bottom:-6%">
+        <div style="position:absolute;inset:0;transition:transform 1.8s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.04)">
+          <image-slot id="v3sv-signature-glass" shape="rect" src="assets/glass-skin-facial.jpg" placeholder="Korean Glass Skin Facial — temporary stock image" style="width:100%;height:100%"></image-slot>
+        </div>
+      </div>
+    </figure>
+    <div style="display:flex;flex-direction:column;gap:clamp(24px,2.6vw,36px)">
+      <p data-reveal="up" style="margin:0;font-size:10px;font-weight:500;letter-spacing:.3em;color:#7A4A50">IN THE TREATMENT</p>
+      <ul data-reveal="up" data-delay="80" style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:{{ sigListCols }};column-gap:24px;border-bottom:1px solid rgba(185,130,135,.45)">
+        <li style="padding:16px 0;border-top:1px solid rgba(185,130,135,.45);font-family:'Cormorant Garamond',serif;font-size:clamp(22px,1.8vw,28px);font-weight:300;line-height:1.15">PDRN</li>
+        <li style="padding:16px 0;border-top:1px solid rgba(185,130,135,.45);font-family:'Cormorant Garamond',serif;font-size:clamp(22px,1.8vw,28px);font-weight:300;line-height:1.15">Peptides</li>
+        <li style="padding:16px 0;border-top:1px solid rgba(185,130,135,.45);font-family:'Cormorant Garamond',serif;font-size:clamp(22px,1.8vw,28px);font-weight:300;line-height:1.15">Rice enzymes</li>
+        <li style="padding:16px 0;border-top:1px solid rgba(185,130,135,.45);font-family:'Cormorant Garamond',serif;font-size:clamp(22px,1.8vw,28px);font-weight:300;line-height:1.15">Collagen</li>
+        <li style="padding:16px 0;border-top:1px solid rgba(185,130,135,.45);font-family:'Cormorant Garamond',serif;font-size:clamp(22px,1.8vw,28px);font-weight:300;line-height:1.15">LED light therapy</li>
+        <li style="padding:16px 0;border-top:1px solid rgba(185,130,135,.45);font-family:'Cormorant Garamond',serif;font-size:clamp(22px,1.8vw,28px);font-weight:300;line-height:1.15">Hydration</li>
+      </ul>
+      <div data-reveal="up" data-delay="160">
+        <a href="{{ skinBook }}" style="display:flex;align-items:center;justify-content:center;gap:14px;min-height:58px;padding:0 28px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em;transition:background .6s,color .6s,box-shadow .6s,gap .6s cubic-bezier(.22,.61,.36,1)" style-hover="background:#EFC6C7;color:#454143;box-shadow:inset 0 0 0 1px #454143;gap:22px">BOOK THE SIGNATURE FACIAL <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+  <section id="nails" data-cat="2" data-screen-label="Nails" style="position:relative;overflow:hidden;background:#F2E9DE">
+    <div style="max-width:1680px;margin:0 auto;padding:clamp(80px,8.4vw,136px) clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(44px,5vw,80px)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px 64px">
+        <div style="display:flex;flex-direction:column;gap:clamp(20px,2.2vw,32px)">
+          <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;color:#7A4A50"><span style="width:28px;height:1px;background:#B98287"></span>MANICURE · PEDICURE · MANI-PEDI</p>
+          <h2 data-reveal="up" data-delay="60" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:clamp(96px,10vw,188px);line-height:.78;letter-spacing:-.03em">Nails</h2>
+        </div>
+        <div data-reveal="up" data-delay="120" style="flex:0 1 400px;display:flex;flex-direction:column;gap:22px">
+          <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,2vw,30px);line-height:1.25;color:#5E5557">Precise, clean and quietly polished.</p>
+          <a href="{{ nails.book }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid #454143;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left/0% 100%;transition:background-size .8s cubic-bezier(.65,0,.35,1),color .5s,gap .6s" style-hover="background-size:100% 100%;color:#F8F3EC;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,4.4fr);gap:clamp(18px,2.2vw,40px);align-items:start">
+        <sc-for list="{{ nails.items }}" as="it" hint-placeholder-count="3">
+          <li data-reveal="up" data-delay="{{ it.delay }}" style="margin-top:{{ it.mt }};display:flex;flex-direction:column;gap:20px">
+            <div style="display:flex;flex-direction:column;gap:20px">
+              <div style="position:relative;aspect-ratio:{{ it.ar }};overflow:hidden;background:#E3D2C8">
+                <div style="position:absolute;inset:0;transition:transform 1.8s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.05)">
+                  <image-slot id="{{ it.img }}" shape="rect" data-src="{{ it.src }}" placeholder="{{ it.ph }}" style="width:100%;height:100%"></image-slot>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid rgba(185,130,135,.45)">
+                <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,2.3vw,38px);font-weight:300;line-height:1.05">{{ it.name }}</span>
+                <span style="font-size:14px;line-height:1.7;color:#5E5557">{{ it.desc }}</span>
+              </div>
+            </div>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <section id="beauty" data-cat="3" data-screen-label="Beauty" style="position:relative;overflow:hidden;background:#EFC6C7">
+    <div style="max-width:1680px;margin:0 auto;padding:clamp(72px,7.4vw,120px) clamp(20px,3.6vw,56px) clamp(80px,8.4vw,136px)">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(18px,2vw,28px)">
+        <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;color:#7A4A50"><span style="width:28px;height:1px;background:#454143"></span>MAKEUP · BEAUTY TREATMENTS<span style="width:28px;height:1px;background:#454143"></span></p>
+        <h2 data-reveal="up" data-delay="60" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(96px,11vw,200px);line-height:.82;letter-spacing:-.03em">Beauty</h2>
+        <p data-reveal="up" data-delay="120" style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,2vw,30px);line-height:1.25;color:#454143">Makeup and everyday beauty, by appointment.</p>
+      </div>
+      <div style="margin-top:clamp(40px,4.4vw,72px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,3vw,56px);align-items:end">
+        <div data-reveal="up" data-delay="0" style="display:flex;flex-direction:column;gap:20px">
+          <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#E2B9BA">
+            <div style="position:absolute;inset:0;transition:transform 1.8s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.05)">
+              <image-slot id="v3sv-beauty-1" shape="rect" src="https://images.pexels.com/photos/3813896/pexels-photo-3813896.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" placeholder="Makeup detail — temporary stock image" style="width:100%;height:100%"></image-slot>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid rgba(69,65,67,.22)">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,2.4vw,40px);font-weight:300;line-height:1.05">Makeup</span>
+            <span style="font-size:14px;line-height:1.7;color:#514A4C;min-height:3.4em">Makeup for events, occasions and bridal.</span>
+          </div>
+        </div>
+        <div data-reveal="clip" data-delay="120" style="position:relative;aspect-ratio:3/4;overflow:hidden;background:#E2B9BA">
+          <div data-parallax="0.05" style="position:absolute;left:0;right:0;top:-6%;bottom:-6%">
+            <div style="position:absolute;inset:0;transition:transform 1.8s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.04)">
+              <video id="v3sv-beauty" data-sync-video="" src="assets/beauty-daylight.mp4" poster="assets/beauty-daylight-poster.webp" muted="" loop="" playsinline="" preload="none" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block"></video>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="up" data-delay="160" style="display:flex;flex-direction:column;gap:20px">
+          <div style="position:relative;aspect-ratio:4/5;overflow:hidden;background:#E2B9BA">
+            <div style="position:absolute;inset:0;transition:transform 1.8s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.05)">
+              <image-slot id="v3sv-beauty-2" shape="rect" src="https://images.pexels.com/photos/4207234/pexels-photo-4207234.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" placeholder="Beauty treatments — temporary stock image" style="width:100%;height:100%"></image-slot>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid rgba(69,65,67,.22)">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,2.4vw,40px);font-weight:300;line-height:1.05">Beauty Treatments</span>
+            <span style="font-size:14px;line-height:1.7;color:#514A4C;min-height:3.4em">Everyday beauty services. Ask the studio for the full list.</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="up" style="display:flex;justify-content:center;margin-top:clamp(40px,4.4vw,64px)">
+        <a href="{{ beauty.book }}" style="display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid #454143;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left/0% 100%;transition:background-size .8s cubic-bezier(.65,0,.35,1),color .5s,gap .6s" style-hover="background-size:100% 100%;color:#F8F3EC;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="wellness" data-cat="4" data-screen-label="Wellness" style="position:relative;isolation:isolate;overflow:hidden;background:#F8F3EC">
+    <div data-reveal="up" aria-hidden="true" style="position:absolute;right:clamp(16px,3vw,56px);bottom:clamp(20px,3vw,44px);z-index:-1;width:clamp(110px,11vw,190px);pointer-events:none;opacity:.85"><img src="assets/florals/footer-sprig.svg" alt="" style="display:block;width:100%;height:auto"></div>
+    <div style="max-width:1680px;margin:0 auto;padding:clamp(80px,8.4vw,136px) clamp(20px,3.6vw,56px);display:flex;flex-direction:column;gap:clamp(40px,4.4vw,68px)">
+      <div style="display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(36px,4.4vw,80px);align-items:end">
+        <div style="display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px)">
+          <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;color:#5C6150"><span style="width:6px;height:6px;background:#A8AD9B;transform:rotate(45deg)"></span>A PRIVATE RITUAL</p>
+          <h2 data-reveal="up" data-delay="60" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(76px,7.6vw,146px);line-height:.82;letter-spacing:-.03em">Well<em style="color:#865258">ness</em></h2>
+          <p data-reveal="up" data-delay="120" style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,2vw,30px);line-height:1.25;color:#5E5557">Warmth, steam and stillness.</p>
+        </div>
+        <div data-reveal="clip" style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#E3E1D8">
+          <div data-parallax="0.05" style="position:absolute;left:0;right:0;top:-7%;bottom:-7%">
+            <div style="position:absolute;inset:0;transition:transform 1.8s cubic-bezier(.16,1,.3,1)" style-hover="transform:scale(1.04)">
+              <image-slot id="v3sv-wellness" shape="rect" src="assets/wellness-spa.webp" placeholder="Wellness" style="width:100%;height:100%"></image-slot>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);gap:clamp(28px,3.4vw,64px);align-items:end">
+        <div data-reveal="up" style="display:flex;flex-direction:column;gap:10px;padding-top:22px;border-top:1px solid #A8AD9B;transition:transform .8s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateX(8px)">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3vw,50px);font-weight:300;line-height:1">Moroccan Bath</span>
+          <span style="font-size:14px;line-height:1.7;color:#5E5557">A traditional bathing ritual of warmth and steam.</span>
+        </div>
+        <div data-reveal="up" data-delay="80" style="display:flex;flex-direction:column;gap:10px;padding-top:22px;border-top:1px solid #A8AD9B;transition:transform .8s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateX(8px)">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3vw,50px);font-weight:300;line-height:1">Spa / Wellness Treatments</span>
+          <span style="font-size:14px;line-height:1.7;color:#5E5557">Massage and spa treatments.</span>
+        </div>
+        <div data-reveal="up" data-delay="160" style="display:flex;justify-content:flex-end">
+          <a href="{{ wellness.book }}" style="display:inline-flex;align-items:center;gap:14px;min-height:54px;padding:0 26px;border:1px solid #454143;font-size:11px;font-weight:500;letter-spacing:.22em;background:linear-gradient(#454143,#454143) no-repeat left/0% 100%;transition:background-size .8s cubic-bezier(.65,0,.35,1),color .5s,gap .6s" style-hover="background-size:100% 100%;color:#F8F3EC;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</sc-if>
+
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <sc-for list="{{ mobB }}" as="c" hint-placeholder-count="3">
+    <section id="{{ c.key }}" data-cat="{{ c.idx }}" data-screen-label="{{ c.title }}" style="background:{{ c.bg }};border-top:1px solid rgba(69,65,67,.1)">
+      <h2 style="margin:0">
+        <button type="button" onClick="{{ c.toggle }}" aria-expanded="{{ c.expanded }}" aria-controls="{{ c.panelId }}" style="width:100%;display:grid;grid-template-columns:minmax(0,1fr) 44px;align-items:center;gap:16px;min-height:104px;padding:26px 20px;background:none;border:0;text-align:left;cursor:pointer">
+          <span style="display:flex;flex-direction:column;gap:10px"><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(46px,13vw,64px);font-weight:300;line-height:.88;letter-spacing:-.02em;font-style:{{ c.titleFs }}">{{ c.title }}</span><span style="font-family:Manrope,sans-serif;font-size:12.5px;font-weight:400;line-height:1.5;letter-spacing:0;color:{{ c.soft }}">{{ c.summary }}</span></span>
+          <span aria-hidden="true" style="position:relative;width:44px;height:44px;display:block;transform:{{ c.sign }};transition:transform .22s cubic-bezier(.4,0,.2,1)"><span style="position:absolute;left:12px;right:12px;top:21.5px;height:1px;background:#454143"></span><span style="position:absolute;top:12px;bottom:12px;left:21.5px;width:1px;background:#454143"></span></span>
+        </button>
+      </h2>
+      <div id="{{ c.panelId }}" role="region" aria-label="{{ c.title }}" style="display:grid;grid-template-rows:{{ c.rows }};transition:grid-template-rows .22s cubic-bezier(.4,0,.2,1)">
+        <div style="overflow:hidden;min-height:0">
+          <div style="padding:0 20px 40px;display:flex;flex-direction:column;gap:24px;opacity:{{ c.innerOp }};transform:{{ c.innerTf }};transition:opacity .2s,transform .22s cubic-bezier(.4,0,.2,1)">
+            <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#E3D2C8">
+              <sc-if value="{{ c.noVid }}" hint-placeholder-val="{{ true }}">
+              <image-slot id="{{ c.img }}" shape="rect" data-src="{{ c.src }}" placeholder="{{ c.ph }}" style="width:100%;height:100%"></image-slot>
+              </sc-if>
+              <sc-if value="{{ c.hasVid }}" hint-placeholder-val="{{ false }}">
+                <video data-sync-video="" src="assets/beauty-daylight.mp4" poster="assets/beauty-daylight-poster.webp" muted="" loop="" playsinline="" preload="none" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block"></video>
+              </sc-if>
+            </div>
+            <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:24px;line-height:1.25">{{ c.intro }}</p>
+            <ul style="margin:0;padding:0;list-style:none;border-bottom:1px solid {{ c.rule }}">
+              <sc-for list="{{ c.items }}" as="it" hint-placeholder-count="3">
+                <li style="display:flex;flex-direction:column;gap:6px;padding:18px 0;border-top:1px solid {{ c.rule }}"><span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;line-height:1.1">{{ it.name }}</span><span style="font-size:14px;line-height:1.65;color:{{ c.soft }}">{{ it.desc }}</span></li>
+              </sc-for>
+            </ul>
+            <a href="{{ c.book }}" style="display:flex;align-items:center;justify-content:center;gap:14px;min-height:54px;border:1px solid #454143;font-size:11px;font-weight:500;letter-spacing:.22em">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </sc-for>
+</sc-if>
+
+<section data-screen-label="Final CTA" aria-label="Book an appointment" style="position:relative;isolation:isolate;min-height:{{ ctaH }};overflow:hidden;display:flex;align-items:center;justify-content:center;background:#EFC6C7">
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse 46% 42% at 50% 42%,rgba(246,217,217,.85) 0%,rgba(239,198,199,0) 100%)"></div>
+  <div data-reveal="up" aria-hidden="true" style="position:absolute;left:-12px;bottom:-48px;z-index:-1;width:clamp(170px,34vw,620px);pointer-events:none"><img data-parallax="0.05" src="assets/florals/cta-left.svg?v=2" alt="" style="display:block;width:100%;height:auto"></div>
+  <div data-reveal="up" data-delay="180" aria-hidden="true" style="position:absolute;right:-12px;bottom:-48px;z-index:-1;width:clamp(170px,34vw,620px);pointer-events:none"><img data-parallax="0.07" src="assets/florals/cta-right.svg?v=2" alt="" style="display:block;width:100%;height:auto"></div>
+  <div style="width:100%;max-width:1000px;margin:0 auto;padding:clamp(96px,9vw,140px) clamp(20px,3.6vw,56px) clamp(220px,18vw,270px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(26px,2.8vw,40px)">
+    <p data-reveal="up" style="margin:0;display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.3em;padding-left:.3em;color:#7A4A50"><span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span>STUDIO M · F-8 ISLAMABAD<span style="width:6px;height:6px;background:#B98287;transform:rotate(45deg)"></span></p>
+    <h2 data-reveal="up" data-delay="80" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(46px,6.2vw,116px);line-height:.9;letter-spacing:-.02em;color:#454143;text-wrap:balance">Your next<br>beauty experience<br><em style="color:#865258">starts here.</em></h2>
+    <div data-reveal="up" data-delay="160" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 32px">
+      <a href="{{ bookingUrl }}" style="display:inline-flex;align-items:center;gap:14px;min-height:58px;padding:0 32px;background:#454143;color:#F8F3EC;font-size:11px;font-weight:500;letter-spacing:.22em;transition:background .6s cubic-bezier(.22,.61,.36,1),color .6s,box-shadow .6s,gap .6s cubic-bezier(.22,.61,.36,1)" style-hover="background:#F8F3EC;color:#454143;box-shadow:inset 0 0 0 1px #454143;gap:22px">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+      <a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px;font-size:11px;font-weight:500;letter-spacing:.22em;color:#454143;background:linear-gradient(#454143,#454143) no-repeat left bottom/100% 1px;transition:background-size .7s cubic-bezier(.65,0,.35,1)" style-hover="background-size:30% 1px">GET DIRECTIONS</a>
+    </div>
+    <p data-reveal="up" data-delay="240" style="margin:0;max-width:380px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.3;color:#7A4A50">“Designed around the way you want to feel.”</p>
+  </div>
+</section>
+
+</main>
+
+<footer data-screen-label="Footer" style="position:relative;isolation:isolate;overflow:hidden;background:#F2E9DE;color:#5E5557;border-top:1px solid rgba(185,130,135,.3)">
+  <div data-reveal="up" aria-hidden="true" style="position:absolute;right:clamp(16px,3vw,48px);top:clamp(14px,2vw,28px);z-index:-1;width:clamp(120px,14vw,220px);pointer-events:none"><img src="assets/florals/footer-sprig.svg" alt="" style="display:block;width:100%;height:auto"></div>
+  <div style="max-width:1680px;margin:0 auto;padding:clamp(64px,7vw,110px) clamp(20px,3.6vw,56px) {{ footerPadBottom }};display:flex;flex-direction:column;gap:clamp(44px,5vw,72px)">
+    <div style="display:flex;justify-content:center">
+      <a href="StudioM-Home-v5.dc.html" aria-label="Studio M — home" style="display:flex;line-height:1;max-width:100%">
+        <img src="assets/studio-m-logo.svg" alt="" style="display:block;flex-shrink:0;max-width:100%;width:auto;height:calc(clamp(52px,9vw,150px) + 25px)">
+      </a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:44px 32px;padding-top:44px;border-top:1px solid rgba(69,65,67,.12)">
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">VISIT</p><address style="font-style:normal;font-size:16px;line-height:1.8">Allah Waali Market, Street 33<br>F-8/1, Islamabad, Pakistan</address></div>
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">HOURS</p><p style="margin:0;font-size:16px;line-height:1.8">Open 7 days<br>11:00 AM – 7:30 PM</p></div>
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">CONTACT</p><div style="display:flex;flex-direction:column;font-size:16px;line-height:1.8"><a href="tel:+92518357921" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">051 835 7921</a><a href="{{ mapsUrl }}" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Google Maps ↗</a></div></div>
+      <div style="display:flex;flex-direction:column;gap:14px"><p style="margin:0;font-size:10.5px;font-weight:500;letter-spacing:.26em;color:#7A4A50">FOLLOW</p><div style="display:flex;flex-direction:column;font-size:16px;line-height:1.8"><a href="https://www.instagram.com/studiom.f8/" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Instagram — @studiom.f8</a><a href="https://www.facebook.com/studiomislamabad/" target="_blank" rel="noopener" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">Facebook — Studio M Islamabad</a></div></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:28px;border-top:1px solid rgba(69,65,67,.08);font-size:11px;letter-spacing:.12em;line-height:1.7;color:#5E5557">
+      <span>© 2026 STUDIO M · F-8/1 ISLAMABAD</span>
+      <span>Temporary stock photography (Pexels) pending Studio M imagery.</span>
+      <a href="#top" style="color:#5E5557;transition:color .4s" style-hover="color:#454143">BACK TO TOP ↑</a>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ stickyShow }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:80;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:{{ ctaBg }};backdrop-filter:{{ barBlur }};-webkit-backdrop-filter:{{ barBlur }};border-top:1px solid rgba(69,65,67,.1);transform:{{ stickyTf }};transition:transform .9s cubic-bezier(.16,1,.3,1)">
+    <a href="{{ bookingUrl }}" style="flex:1.7;display:flex;align-items:center;justify-content:center;min-height:50px;background:#454143;color:#F8F3EC;font-size:10.5px;font-weight:500;letter-spacing:.2em">BOOK AN APPOINTMENT</a>
+    <a href="tel:+92518357921" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:50px;border:1px solid #B98287;font-size:10.5px;font-weight:500;letter-spacing:.2em">CALL</a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;StudioM-Booking.dc.html&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Booking&quot;},&quot;stickyCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Booking&quot;},&quot;spreadTrigger&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;On load&quot;,&quot;On scroll&quot;],&quot;default&quot;:&quot;On load&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+const PX = (id, w) => typeof id === 'string' ? id : id ? 'https://images.pexels.com/photos/' + id + '/pexels-photo-' + id + '.jpeg?auto=compress&cs=tinysrgb&w=' + (w || 1400) : '';
+const MAPS = 'https://www.google.com/maps/search/?api=1&query=Studio+M+Hair+Nail+Beauty+Salon+Allah+Waali+Market+F-8%2F1+Islamabad';
+const OUT = 'cubic-bezier(.16,1,.3,1)', INOUT = 'cubic-bezier(.65,0,.35,1)';
+const BP = 1080, SBP = 900;
+// Temporary Pexels stock throughout — not Studio M work.
+const CATS = [
+  { key: 'hair', title: 'Hair', svc: 'Hair', bg: '#F2E9DE', main: 7440054, summary: 'Haircuts, colour, treatments and styling.', intro: 'Cut, colour and care, shaped around you.', items: [
+    ['Haircuts', 'Cuts and reshaping, tailored to your hair and routine.'],
+    ['Hair Colour', 'Colour services, from a subtle refresh to a new direction.', 3993312],
+    ['Hair Treatments', 'Restorative treatments, including keratin-based options.'],
+    ['Hair Styling', 'Blow-dries and styling for everyday and occasions.']] },
+  { key: 'skin', title: 'Skin', svc: 'Skin', bg: '#EFC6C7', main: 19242406, summary: 'Facials, dermaplaning and advanced skincare treatments.', intro: 'Facials and treatments for clear, rested skin.', items: [
+    ['Facials', 'Facials matched to your skin and its needs.', 3738349],
+    ['Dermaplaning', 'Gentle exfoliation for a smooth, even surface.'],
+    ['Advanced Skin Treatments', 'Targeted treatments. Ask the studio for current options.']] },
+  { key: 'nails', title: 'Nails', svc: 'Nails', bg: '#F2E9DE', main: 19239100, italic: true, summary: 'Manicure, pedicure and mani-pedi.', intro: 'Precise, clean and quietly polished.', items: [
+    ['Manicure', 'Shaping, cuticle care and polish.', 17471377],
+    ['Pedicure', 'Foot care, shaping and polish.', 14267564],
+    ['Mani-Pedi', 'Hands and feet, in one appointment.', 16363470]] },
+  { key: 'beauty', title: 'Beauty', svc: 'Beauty', bg: '#EFC6C7', main: 20593111, video: 'assets/beauty-daylight.mp4', summary: 'Makeup and beauty treatments.', intro: 'Makeup and everyday beauty, by appointment.', items: [
+    ['Makeup', 'Makeup for events, occasions and bridal.', 3813896],
+    ['Beauty Treatments', 'Everyday beauty services. Ask the studio for the full list.']] },
+  { key: 'wellness', title: 'Wellness', svc: 'Wellness', bg: '#F8F3EC', main: 'assets/wellness-spa.webp', summary: 'Moroccan Bath and spa treatments.', intro: 'Warmth, steam and stillness.', items: [
+    ['Moroccan Bath', 'A traditional bathing ritual of warmth and steam.'],
+    ['Spa / Wellness Treatments', 'Massage and spa treatments.']] }
+];
+const NAIL_LAYOUT = [{ ar: '3/4', mt: '0px' }, { ar: '4/5', mt: 'clamp(56px,7vw,128px)' }, { ar: '2/3', mt: 'clamp(20px,2.4vw,44px)' }];
+
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, scrolled: false, past: false, menu: false, hover: null, open: { 0: true }, active: -1 };
+
+  syncSlots() {
+    document.querySelectorAll('image-slot[data-src]').forEach(el => { const v = el.dataset.src; if (v && v.indexOf('{{') < 0 && el.getAttribute('src') !== v) el.setAttribute('src', v); });
+  }
+  componentDidMount() {
+    this.syncSlots();
+    this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.onResize = () => { this.setState({ w: window.innerWidth }); this.tick(); };
+    this.onScroll = () => this.tick();
+    this.onKey = e => { if (e.key === 'Escape' && this.state.menu) this.setMenu(false); };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('keydown', this.onKey);
+    let h = (location.hash || '').slice(1); if (h === 'beauty-wellness') h = 'beauty';
+    const hi = CATS.findIndex(c => c.key === h);
+    if (hi >= 0) {
+      this.setState({ open: { [hi]: true } });
+      setTimeout(() => { const el = document.getElementById(CATS[hi].key); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 120 }); }, 450);
+    }
+    this.frame();
+    requestAnimationFrame(() => { this.intro(); this.setupReveal(); this.setupAuto(); this.fx(); this.setupVideo(); this.petals(); });
+  }
+  petals() {
+    if (this.reduced) return;
+    document.querySelectorAll('[data-petal]').forEach((el, i) => {
+      if (el.__drift) return; el.__drift = 1;
+      el.animate([{ transform: 'translate(0,0) rotate(0deg)' }, { transform: 'translate(10px,14px) rotate(9deg)' }, { transform: 'translate(-4px,26px) rotate(-4deg)' }, { transform: 'translate(0,0) rotate(0deg)' }],
+        { duration: 12000 + i * 2600, iterations: Infinity, easing: 'ease-in-out' });
+    });
+  }
+  setupVideo() {
+    const vids = [...document.querySelectorAll('video[data-sync-video]')];
+    if (!vids.length || vids[0] === this.vidEl) return;
+    this.vidEl = vids[0]; this.vidIO && this.vidIO.disconnect();
+    const play = v => { const p = v.play(); p && p.catch(() => {}); };
+    vids.forEach(v => {
+      v.muted = true; v.defaultMuted = true; v.loop = true;
+      v.addEventListener('ended', () => { if (this.vidInView) { v.currentTime = 0; play(v); } });
+    });
+    const sec = document.getElementById('beauty') || vids[0];
+    this.vidIO = new IntersectionObserver(([e]) => {
+      this.vidInView = e.isIntersecting;
+      vids.forEach(v => { if (e.isIntersecting) play(v); else v.pause(); });
+    }, { threshold: 0.15 });
+    this.vidIO.observe(sec);
+  }
+  componentWillUnmount() {
+    this.vidIO && this.vidIO.disconnect();
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('keydown', this.onKey);
+    if (this.io) this.io.disconnect();
+    if (this.aio) this.aio.disconnect();
+    document.body.style.overflow = '';
+  }
+  componentDidUpdate() {
+    this.syncSlots(); this.setupReveal(); this.setupAuto(); this.setupVideo(); }
+  // Mobile only: open the category whose top has crossed 70% of the viewport.
+  setupAuto() {
+    if (window.innerWidth >= SBP || !('IntersectionObserver' in window)) return;
+    if (!this.aio) { this.vis = new Set(); this.aio = new IntersectionObserver(es => {
+      es.forEach(e => { const i = +e.target.dataset.cat; if (e.isIntersecting) this.vis.add(i); else this.vis.delete(i); });
+      if (window.innerWidth >= SBP || !this.vis.size) return;
+      const a = Math.max(...this.vis);
+      if (a !== this.autoA) {
+        this.autoA = a;
+        // Close only categories below the active one; collapsing those above would yank the page under the reader.
+        this.setState(s => { const open = {}; Object.keys(s.open).forEach(k => { if (+k < a && s.open[k]) open[k] = true; }); open[a] = true; return { open }; });
+      }
+    }, { rootMargin: '0px 0px -30% 0px', threshold: 0 }); }
+    document.querySelectorAll('[data-cat]').forEach(el => { if (!el.__aio) { el.__aio = 1; this.aio.observe(el); } });
+  }
+
+  tick() { if (this.raf) return; this.raf = requestAnimationFrame(() => { this.raf = 0; this.frame(); }); }
+  // One read pass, then one write pass, per frame.
+  frame() {
+    const y = window.scrollY, vh = window.innerHeight, s = y > 40, p = y > vh * 0.6, lim = vh * 0.45;
+    let a = -1; document.querySelectorAll('[data-cat]').forEach(el => { if (el.getBoundingClientRect().top < lim) a = +el.dataset.cat; });
+    this.fx();
+    if (s !== this.state.scrolled || p !== this.state.past || a !== this.state.active) this.setState({ scrolled: s, past: p, active: a });
+  }
+  fx() {
+    if (this.reduced) return;
+    const vh = window.innerHeight, k = window.innerWidth < BP ? 0.5 : 1;
+    const jobs = [];
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const r = el.parentElement.getBoundingClientRect(), near = r.height > 0 && r.bottom > -300 && r.top < vh + 300;
+      jobs.push([el, near, near ? -((r.top + r.height / 2) - vh / 2) * (+el.dataset.parallax) * k : 0]);
+    });
+    jobs.forEach(([el, near, v]) => {
+      if (!near) { if (el.__wc) { el.style.willChange = ''; el.__wc = 0; } return; }
+      if (!el.__wc) { el.style.willChange = 'transform'; el.__wc = 1; }
+      const t = 'translate3d(0,' + v.toFixed(1) + 'px,0)';
+      if (el.__t !== t) { el.style.transform = t; el.__t = t; }
+    });
+  }
+  intro() {
+    if (this.reduced) return;
+    const m = window.innerWidth < BP;
+    document.querySelectorAll('[data-intro]').forEach(el => {
+      if (el.__intro) return; el.__intro = 1;
+      const i = +el.dataset.intro || 0, k = el.dataset.introKind, d = 250 + i * 150;
+      const A = (f, o) => el.animate(f, Object.assign({ fill: 'backwards' }, o));
+      if (k === 'aperture') A([{ clipPath: 'inset(10% 14% 10% 14%)', opacity: 0 }, { opacity: 1, offset: 0.25 }, { clipPath: 'inset(0% 0% 0% 0%)', opacity: 1 }], { duration: m ? 1300 : 1600, delay: 60, easing: INOUT });
+      else if (k === 'zoom') A([{ transform: 'scale(1.14)' }, { transform: 'scale(1)' }], { duration: 2800, delay: 60, easing: OUT });
+      else if (k === 'line') A([{ transform: 'translateY(108%)' }, { transform: 'translateY(0)' }], { duration: 1400, delay: 300 + i * 160, easing: OUT });
+      else if (k === 'down') A([{ opacity: 0, transform: 'translateY(-14px)' }, { opacity: 1, transform: 'none' }], { duration: 1100, delay: 900, easing: OUT });
+      else if (k === 'fade') A([{ opacity: 0 }, { opacity: 1 }], { duration: 1200, delay: d + 400, easing: OUT });
+      else A([{ opacity: 0, transform: 'translateY(' + (m ? 14 : 22) + 'px)' }, { opacity: 1, transform: 'none' }], { duration: 1200, delay: d + 350, easing: OUT });
+    });
+  }
+  setupReveal() {
+    if (this.reduced || !('IntersectionObserver' in window)) return;
+    if (!this.io) this.io = new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting) { const ts = en.target.__rvKids || [en.target]; this.io.unobserve(en.target); ts.forEach(t => this.show(t)); }
+    }), { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+    const vh = window.innerHeight, m = window.innerWidth < BP;
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.__rv) return; el.__rv = 1;
+      const r = el.getBoundingClientRect();
+      if (r.height === 0 || r.top < vh * 0.94) return;
+      el.style.transition = 'none';
+      if (el.dataset.reveal === 'clip') el.style.clipPath = 'inset(100% 0 0 0)';
+      else { el.style.opacity = '0'; el.style.transform = 'translateY(' + (m ? 16 : 26) + 'px)'; }
+      if (el.style.clipPath && el.parentElement) { const pe = el.parentElement; (pe.__rvKids = pe.__rvKids || []).push(el); this.io.observe(pe); } else this.io.observe(el);
+    });
+  }
+  show(el) {
+    const d = +el.dataset.delay || 0, clip = el.dataset.reveal === 'clip';
+    el.style.transition = clip ? 'clip-path 1.5s ' + INOUT + ' ' + d + 'ms' : 'opacity 1.1s ' + OUT + ' ' + d + 'ms, transform 1.3s ' + OUT + ' ' + d + 'ms';
+    requestAnimationFrame(() => { if (clip) el.style.clipPath = 'inset(0 0 0 0)'; else { el.style.opacity = '1'; el.style.transform = 'none'; } });
+    setTimeout(() => { el.style.transition = ''; el.style.clipPath = ''; el.style.opacity = ''; el.style.transform = ''; }, 1800 + d);
+  }
+  setMenu(open) { document.body.style.overflow = open ? 'hidden' : ''; this.setState({ menu: open }); }
+
+  renderVals() {
+    const p = this.props, { w, scrolled, past, menu, hover, open, active } = this.state;
+    const isNarrow = w < BP, isMobile = w < SBP, sticky = p.stickyCta ?? true;
+    const B = p.bookingUrl || 'StudioM-Booking.dc.html';
+    const book = svc => B + (B.indexOf('?') < 0 ? '?' : '&') + 'service=' + svc;
+    const leave = () => this.setState({ hover: null });
+    const desk = (c, ci) => {
+      const hv = hover && hover.c === ci ? hover.r : -1;
+      const pics = [{ id: 'v3sv-' + c.key, src: PX(c.main), ph: c.title + ' — temporary stock image', r: -1 }]
+        .concat(c.items.map((it, ri) => it[2] ? { id: 'v3sv-' + c.key + '-' + (ri + 1), src: PX(it[2]), ph: it[0] + ' — temporary stock image', r: ri } : null).filter(Boolean));
+      const showR = pics.some(pi => pi.r === hv) ? hv : -1;
+      return {
+        book: book(c.svc), leave,
+        imgs: pics.map(pi => ({ id: pi.id, src: pi.src, ph: pi.ph, op: pi.r === showR ? 1 : 0, scale: pi.r === showR ? 'scale(1)' : 'scale(1.06)' })),
+        items: c.items.map((it, ri) => {
+          const on = hv === ri, L = NAIL_LAYOUT[ri] || NAIL_LAYOUT[0];
+          return { name: it[0], desc: it[1], fs: on ? 'italic' : 'normal', shift: on ? 'translateX(12px)' : 'none',
+            line: on ? 'scaleX(1)' : 'scaleX(0)', arrow: on ? 'translateX(0)' : 'translateX(-12px)', arrowOp: on ? 1 : 0, descOp: hv < 0 || on ? 1 : 0.55,
+            enter: () => this.setState({ hover: { c: ci, r: ri } }),
+            img: 'v3sv-' + c.key + '-' + (ri + 1), src: PX(it[2], 1000), ph: it[0] + ' — temporary stock image', ar: L.ar, mt: L.mt, delay: ri * 120 };
+        })
+      };
+    };
+    const mob = (c, ci) => {
+      const isOpen = !!open[ci], blush = c.bg === '#EFC6C7';
+      return { key: c.key, idx: ci, title: c.title, summary: c.summary, intro: c.intro, bg: c.bg, book: book(c.svc),
+        titleFs: c.italic ? 'italic' : 'normal', soft: blush ? '#514A4C' : '#5E5557',
+        rule: c.key === 'wellness' ? '#A8AD9B' : (blush ? 'rgba(69,65,67,.22)' : 'rgba(185,130,135,.45)'),
+        img: 'v3sv-' + c.key, src: PX(c.main, 1000), video: c.video || '', hasVid: !!c.video, noVid: !c.video, ph: c.title + ' — temporary stock image',
+        items: c.items.map(it => ({ name: it[0], desc: it[1] })),
+        panelId: 'cat-panel-' + ci, expanded: String(isOpen), rows: isOpen ? '1fr' : '0fr',
+        innerOp: isOpen ? 1 : 0, innerTf: isOpen ? 'none' : 'translateY(14px)', sign: isOpen ? 'rotate(45deg)' : 'none',
+        toggle: () => this.setState(s => ({ open: { ...s.open, [ci]: !s.open[ci] } })) };
+    };
+    const d = CATS.map(desk);
+    const m = CATS.map(mob);
+    return {
+      isNarrow, isWide: !isNarrow, isMobile, isDesktop: !isMobile,
+      bookingUrl: B, mapsUrl: MAPS, skinBook: book('Skin'),
+      headerBg: scrolled && !menu ? 'rgba(248,243,236,.86)' : 'rgba(248,243,236,0)',
+      headerBlur: scrolled && !menu ? 'saturate(130%) blur(18px)' : 'none',
+      headerLine: scrolled && !menu ? 'rgba(69,65,67,.08)' : 'rgba(69,65,67,0)',
+      headerPadY: scrolled ? '12px' : (isNarrow ? '18px' : '28px'),
+      barTop: scrolled ? '62px' : (isNarrow ? '73px' : '93px'),
+      exploreServices: e => {
+        const el = document.getElementById('hair'); if (!el) return;
+        e.preventDefault();
+        const y = el.getBoundingClientRect().top + window.scrollY - (isNarrow ? 118 : 112);
+        window.scrollTo({ top: Math.max(0, y), behavior: this.reduced ? 'auto' : 'smooth' });
+      },
+      barBg: isMobile ? 'rgba(248,243,236,.97)' : 'rgba(248,243,236,.9)', ctaBg: isMobile ? 'rgba(248,243,236,.97)' : 'rgba(248,243,236,.92)', barBlur: isMobile ? 'none' : 'blur(16px)',
+      svHeroMinH: isMobile ? '0px' : '100svh', svHeroWrap: 'nowrap',
+      svDir: isMobile ? 'column' : 'row', svGap: isMobile ? '20px' : 'clamp(32px,4vw,96px)', svTextDisp: isMobile ? 'contents' : 'flex',
+      svAlign: isMobile ? 'center' : 'left', svJustify: isMobile ? 'center' : 'flex-start', svStretch: isMobile ? 'stretch' : 'auto',
+      svH1: isMobile ? 'clamp(52px,16vw,76px)' : 'clamp(56px,7.2vw,132px)', svDescGap: isMobile ? '12px' : '18px',
+      svClusterM: isMobile ? '14px 0 18px' : '0', svClusterW: isMobile ? 'min(100%,440px)' : 'min(100%,calc(78svh * 1.1),820px)',
+      svClusterAR: isMobile ? '1/1.04' : '10/9', svPW: isMobile ? '33%' : '30%', svPWb: isMobile ? '33%' : '31%', svPaTop: isMobile ? '38%' : '30%', svPbR: isMobile ? '0%' : '2%', svCtaFlex: w < 520 ? '1 1 100%' : '0 0 auto',
+      svHeroPad: isMobile ? '104px 20px 56px' : 'clamp(130px,15vh,170px) clamp(20px,3.6vw,56px) clamp(72px,8vh,110px)',
+      heroPull: isMobile ? '-72px' : 'clamp(-200px,-11vw,-96px)',
+      ctaH: isMobile ? '80svh' : '86svh',
+      sigCols: isMobile ? 'minmax(0,1fr)' : 'minmax(0,1.1fr) minmax(0,1fr) minmax(0,.9fr)',
+      sigListCols: isMobile ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)',
+      toggleMenu: () => this.setMenu(!menu), closeMenu: () => this.setMenu(false),
+      menuExpanded: String(menu), menuHidden: String(!menu), menuLabel: menu ? 'Close menu' : 'Open menu',
+      menuClip: menu ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)', menuVis: menu ? 'visible' : 'hidden',
+      menuOp: menu ? 1 : 0, menuTf: menu ? 'none' : 'translateY(36px)',
+      bar1: menu ? 'translateY(4px) rotate(45deg)' : 'none', bar2: menu ? 'translateY(-4px) rotate(-45deg)' : 'none',
+      cats: CATS.map((c, ci) => {
+        const on = active === ci;
+        return { title: c.title, titleU: c.title.toUpperCase(), summary: c.summary, hash: '#' + c.key,
+          barOp: on ? 1 : 0.6, barLine: on ? '100%' : '0%',
+          chipBg: on ? '#454143' : 'transparent', chipFg: on ? '#F8F3EC' : '#454143', chipLine: on ? '#454143' : 'rgba(185,130,135,.6)',
+          jump: () => { if (isMobile) this.setState(s => ({ open: { ...s.open, [ci]: true } })); } };
+      }),
+      hair: d[0], skin: d[1], nails: d[2], wellness: d[4],
+      beauty: { ...d[3], sideOp: 1, enter0: () => {}, leave: () => {} },
+      mobA: [m[0], m[1]], mobB: [m[2], m[3], m[4]],
+      stickyShow: isNarrow && sticky, stickyTf: past && !menu ? 'translateY(0)' : 'translateY(110%)',
+      footerPadBottom: isNarrow && sticky ? '116px' : '44px'
+    };
+  }
+}
+</script>
+</body>
+</html>
